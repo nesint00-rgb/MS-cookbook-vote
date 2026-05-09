@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#2c5530">
+<title>MS Cookbook Vote</title>
+<style>
+  :root {
+    --bg: #faf7f2;
+    --card-bg: #fff;
+    --border: #e5e0d8;
+    --accent: #2c5530;
+    --accent-light: #d4e3d2;
+    --text: #1a1a1a;
+    --muted: #666;
+    --in-box: #d4a017;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    padding-bottom: 110px;
+  }
+  header {
+    padding: 20px 16px 14px;
+    background: #fff;
+    border-bottom: 1px solid var(--border);
+    text-align: center;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+  }
+  h1 { font-size: 20px; margin: 0 0 4px; font-weight: 700; }
+  .subtitle { color: var(--muted); font-size: 14px; }
+  .legend {
+    text-align: center;
+    color: var(--muted);
+    font-size: 13px;
+    padding: 12px 16px 0;
+    line-height: 1.5;
+  }
+  .slot {
+    margin: 24px 16px 8px;
+  }
+  .slot-header {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+  .slot-count { font-size: 14px; font-weight: normal; color: var(--muted); }
+  .card {
+    background: var(--card-bg);
+    border: 2px solid var(--border);
+    border-radius: 12px;
+    padding: 14px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.15s, border-color 0.15s, transform 0.08s;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .card:active { transform: scale(0.99); }
+  .card.selected {
+    background: var(--accent-light);
+    border-color: var(--accent);
+  }
+  .card-row {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+  }
+  .card-content { flex: 1; min-width: 0; }
+  .card-title {
+    font-weight: 600;
+    margin: 0 0 4px;
+    font-size: 16px;
+    line-height: 1.3;
+  }
+  .star { color: var(--in-box); font-size: 14px; margin-right: 4px; }
+  .card-subtitle {
+    color: var(--muted);
+    font-size: 14px;
+    margin: 0 0 10px;
+    line-height: 1.4;
+  }
+  .card-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    align-items: center;
+    font-size: 12px;
+    color: var(--muted);
+  }
+  .badge {
+    background: #f0ebe2;
+    padding: 2px 8px;
+    border-radius: 999px;
+    color: #5a4a30;
+    white-space: nowrap;
+  }
+  .check {
+    width: 28px;
+    height: 28px;
+    border: 2px solid var(--border);
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    background: #fff;
+    flex-shrink: 0;
+    font-size: 16px;
+  }
+  .selected .check {
+    background: var(--accent);
+    border-color: var(--accent);
+  }
+  .send-bar {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+    border-top: 1px solid var(--border);
+    padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
+    display: flex;
+    gap: 10px;
+    align-items: center;
+  }
+  .send-btn {
+    flex: 1;
+    padding: 14px;
+    background: var(--accent);
+    color: #fff;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+  }
+  .send-btn:disabled {
+    background: #ccc;
+    cursor: default;
+  }
+  .clear-btn {
+    padding: 14px 18px;
+    background: transparent;
+    color: var(--muted);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  .toast {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: #1a1a1a;
+    color: #fff;
+    padding: 12px 20px;
+    border-radius: 999px;
+    font-size: 14px;
+    opacity: 0;
+    transition: opacity 0.2s, transform 0.2s;
+    pointer-events: none;
+    max-width: 90vw;
+    text-align: center;
+  }
+  .toast.show {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  @media (min-width: 700px) {
+    body { max-width: 700px; margin: 0 auto; }
+    .send-bar { max-width: 700px; left: 50%; transform: translateX(-50%); }
+  }
+</style>
+</head>
+<body>
+<header>
+  <h1>Marley Spoon Vote</h1>
+  <div class="subtitle" id="weekof">Loading…</div>
+</header>
+<div class="legend">⭐ = currently in box · tap any recipe you'd be OK with</div>
+<main id="slots"></main>
+<div class="send-bar">
+  <button class="clear-btn" id="clear">Clear</button>
+  <button class="send-btn" id="send" disabled>Send (0)</button>
+</div>
+<div class="toast" id="toast"></div>
+<script>
+  const STATE_KEY = 'ms-vote-selections';
+  let DATA = null;
+  let selections = new Set(JSON.parse(localStorage.getItem(STATE_KEY) || '[]'));
+
+  // Cache-bust so we always get the latest shortlist
+  fetch('current.json?v=' + Date.now())
+    .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
+    .then(data => {
+      DATA = data;
+      document.getElementById('weekof').textContent = 'Week of ' + (data.displayDate || data.weekOf);
+      // If shortlist changed, drop selections that no longer exist
+      const validIds = new Set();
+      data.slots.forEach(s => s.recipes.forEach((_, i) => validIds.add(s.id + '-' + i)));
+      const before = selections.size;
+      selections = new Set([...selections].filter(id => validIds.has(id)));
+      if (selections.size !== before) saveState();
+      render();
+    })
+    .catch(err => {
+      document.getElementById('slots').innerHTML =
+        '<p style="padding:20px;color:#c00;text-align:center">Could not load shortlist: ' + err.message + '</p>';
+    });
+
+  function escapeHtml(s) {
+    return String(s).replace(/[&<>"']/g, c => ({
+      '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+    })[c]);
+  }
+
+  function render() {
+    const root = document.getElementById('slots');
+    root.innerHTML = '';
+    DATA.slots.forEach(slot => {
+      const sec = document.createElement('section');
+      sec.className = 'slot';
+      const subtitle = slot.subtitle ? ` <span class="slot-count">(${escapeHtml(slot.subtitle)})</span>` : '';
+      sec.innerHTML = `
+        <div class="slot-header">
+          <span>${slot.emoji} ${escapeHtml(slot.name.toUpperCase())}</span>
+          <span class="slot-count">${slot.recipes.length} options</span>
+        </div>
+      `;
+      slot.recipes.forEach((recipe, i) => {
+        const id = slot.id + '-' + i;
+        const selected = selections.has(id);
+        const card = document.createElement('div');
+        card.className = 'card' + (selected ? ' selected' : '');
+        card.dataset.id = id;
+        const badges = (recipe.badges || []).map(b => `<span class="badge">${escapeHtml(b)}</span>`).join('');
+        card.innerHTML = `
+          <div class="card-row">
+            <div class="card-content">
+              <div class="card-title">
+                ${recipe.inBox ? '<span class="star">★</span>' : ''}${escapeHtml(recipe.title)}
+              </div>
+              ${recipe.subtitle ? `<div class="card-subtitle">${escapeHtml(recipe.subtitle)}</div>` : ''}
+              <div class="card-meta">
+                ${recipe.time ? `<span>${escapeHtml(recipe.time)}</span>` : ''}
+                ${recipe.cuisine ? `<span>· ${escapeHtml(recipe.cuisine)}</span>` : ''}
+                ${badges}
+              </div>
+            </div>
+            <div class="check">${selected ? '✓' : ''}</div>
+          </div>
+        `;
+        card.addEventListener('click', () => toggle(id, card));
+        sec.appendChild(card);
+      });
+      root.appendChild(sec);
+    });
+    updateSendBtn();
+  }
+
+  function toggle(id, card) {
+    if (selections.has(id)) {
+      selections.delete(id);
+      card.classList.remove('selected');
+      card.querySelector('.check').textContent = '';
+    } else {
+      selections.add(id);
+      card.classList.add('selected');
+      card.querySelector('.check').textContent = '✓';
+    }
+    saveState();
+    updateSendBtn();
+  }
+
+  function saveState() {
+    localStorage.setItem(STATE_KEY, JSON.stringify([...selections]));
+  }
+
+  function updateSendBtn() {
+    const btn = document.getElementById('send');
+    const count = selections.size;
+    btn.textContent = `Send (${count})`;
+    btn.disabled = count === 0;
+  }
+
+  function showToast(msg, ms = 2400) {
+    const t = document.getElementById('toast');
+    t.textContent = msg;
+    t.classList.add('show');
+    setTimeout(() => t.classList.remove('show'), ms);
+  }
+
+  document.getElementById('clear').addEventListener('click', () => {
+    if (selections.size === 0) return;
+    if (!confirm('Clear all selections?')) return;
+    selections.clear();
+    saveState();
+    render();
+  });
+
+  document.getElementById('send').addEventListener('click', async () => {
+    const lines = [`Marley Spoon picks — week of ${DATA.displayDate || DATA.weekOf}`, ''];
+    DATA.slots.forEach(slot => {
+      const picks = slot.recipes
+        .map((r, i) => ({ ...r, id: slot.id + '-' + i }))
+        .filter(r => selections.has(r.id));
+      if (picks.length === 0) return;
+      lines.push(`${slot.emoji} ${slot.name.toUpperCase()} (${picks.length})`);
+      picks.forEach(p => lines.push(`  ✓ ${p.title}`));
+      lines.push('');
+    });
+    const text = lines.join('\n').trim();
+
+    if (navigator.share) {
+      try {
+        await navigator.share({ title: 'MS picks', text });
+        return;
+      } catch (e) {
+        if (e.name === 'AbortError') return;
+      }
+    }
+    fallback(text);
+  });
+
+  function fallback(text) {
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(
+        () => showToast('Copied to clipboard — paste it into a text!', 3000),
+        () => mailtoFallback(text)
+      );
+    } else {
+      mailtoFallback(text);
+    }
+  }
+
+  function mailtoFallback(text) {
+    window.location.href = 'mailto:?subject=MS%20picks&body=' + encodeURIComponent(text);
+  }
+</script>
+</body>
+</html>

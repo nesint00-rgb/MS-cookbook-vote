@@ -1,0 +1,209 @@
+{
+  "weekOf": "2026-05-13",
+  "displayDate": "Wednesday, May 13",
+  "slots": [
+    {
+      "id": "beef",
+      "name": "Beef",
+      "emoji": "🥩",
+      "recipes": [
+        {
+          "title": "Braised Beef Quesabirria Tacos",
+          "subtitle": "with Consommé & Cilantro-Lime Slaw",
+          "time": "50–60 min",
+          "cuisine": "Latin",
+          "badges": ["Premium +$4.99/serv", "Optional Spice"],
+          "inBox": true
+        },
+        {
+          "title": "Express! Vaca Frita",
+          "subtitle": "Cuban Crispy Shredded Beef with Rice",
+          "time": "10–15 min",
+          "cuisine": "Latin"
+        },
+        {
+          "title": "Chimichurri Beef Tacos",
+          "subtitle": "with Slaw & Pickled Onions",
+          "time": "20–30 min",
+          "cuisine": "Latin",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "Beef & Fontina Grilled Cheese",
+          "subtitle": "with Onion Jam & Spinach-Orange Salad",
+          "time": "40–50 min",
+          "cuisine": "American",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "French Bistro-Style Steak Frites",
+          "subtitle": "with Arugula Salad",
+          "time": "40–50 min",
+          "cuisine": "French",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "The Cozy Cottage Pie",
+          "subtitle": "From the Icons of Marley Spoon Collection",
+          "time": "40–50 min",
+          "cuisine": "British",
+          "badges": ["Customizable", "Icons"]
+        }
+      ]
+    },
+    {
+      "id": "chicken",
+      "name": "Chicken",
+      "emoji": "🐔",
+      "recipes": [
+        {
+          "title": "Baked Chicken Schnitzel",
+          "subtitle": "with Potatoes, Onions & Asparagus",
+          "time": "30–40 min",
+          "cuisine": "German",
+          "inBox": true
+        },
+        {
+          "title": "One-Pot Iraqi Chicken & Rice Bake",
+          "subtitle": "with Red Pepper Relish",
+          "time": "30–40 min",
+          "cuisine": "Middle Eastern",
+          "badges": ["Best Seller"]
+        },
+        {
+          "title": "Chicken Kati Rolls",
+          "subtitle": "with Mint Raita & Lime",
+          "time": "30–40 min",
+          "cuisine": "Indian",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "Jerk Chicken Rice Bowl",
+          "subtitle": "with Pineapple Black Bean Salsa",
+          "time": "15–20 min",
+          "cuisine": "Caribbean",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "Wonton Stir-Fry with Chicken Thighs",
+          "subtitle": "& Sugar Snap Peas",
+          "time": "10–15 min",
+          "cuisine": "Asian",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "Fast! Thai Red Curry Chicken with Veggies",
+          "subtitle": "& Ready-to-Heat Jasmine Rice",
+          "time": "15–20 min",
+          "cuisine": "Thai",
+          "badges": ["Premium +$4.99/serv"]
+        },
+        {
+          "title": "Mediterranean Skillet Chicken",
+          "subtitle": "with Burst Tomatoes, Feta & Pearl Couscous",
+          "time": "20–30 min",
+          "cuisine": "Mediterranean",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "Tortilla Soup with Readymade Chicken",
+          "subtitle": "Cilantro & Corn",
+          "time": "20–30 min",
+          "cuisine": "Latin",
+          "badges": ["Best Seller"]
+        },
+        {
+          "title": "Grilled Chicken & Cilantro Rice Bowl",
+          "subtitle": "with Salsa & Guacamole",
+          "time": "20–30 min",
+          "cuisine": "Latin",
+          "badges": ["−$1.00/serv"]
+        },
+        {
+          "title": "Express! Cheesy Chicken Quesadillas",
+          "subtitle": "with Roasted Peppers, Corn & Sour Cream",
+          "time": "10–15 min",
+          "cuisine": "Latin",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "Chicken Piccata",
+          "subtitle": "with Lemony Pasta & Spinach",
+          "time": "20–30 min",
+          "cuisine": "Italian",
+          "badges": ["Dinnerly Saver −$1.00"]
+        },
+        {
+          "title": "The Famous French Onion Chicken Breast",
+          "subtitle": "From the Icons of Marley Spoon Collection",
+          "time": "30–40 min",
+          "cuisine": "French",
+          "badges": ["Highest Rated", "Icons"]
+        },
+        {
+          "title": "The Luxurious Chicken al Limone",
+          "subtitle": "From the Icons of Marley Spoon Collection",
+          "time": "20–30 min",
+          "cuisine": "Italian",
+          "badges": ["Customizable", "Icons"]
+        },
+        {
+          "title": "The Family Favorite Chicken Pot Pie",
+          "subtitle": "From the Icons of Marley Spoon Collection",
+          "time": "2 hours",
+          "cuisine": "American",
+          "badges": ["Big Batch +$4.99/serv", "Icons"]
+        }
+      ]
+    },
+    {
+      "id": "other",
+      "name": "Other",
+      "emoji": "🐟🐖",
+      "subtitle": "shrimp / fish / pork / lamb",
+      "recipes": [
+        {
+          "title": "Martha's Best Shrimp Étouffée",
+          "subtitle": "with Scallion Rice",
+          "time": "30–40 min",
+          "cuisine": "Cajun",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "Pulled Pork Quesadillas",
+          "subtitle": "with Salsa & Sour Cream",
+          "time": "20–30 min",
+          "cuisine": "Latin",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "Seared Pork Cutlets",
+          "subtitle": "with Creamy Green Beans & Crispy Onions",
+          "time": "15–20 min",
+          "cuisine": "American",
+          "badges": ["Customizable"]
+        },
+        {
+          "title": "Masala-Spiced Pork Kebabs",
+          "subtitle": "with Cauliflower Rice & Cilantro",
+          "time": "20–30 min",
+          "cuisine": "Indian",
+          "badges": ["Customizable", "Low-carb"]
+        },
+        {
+          "title": "The Popular Parmesan & Herb Pork Roast",
+          "subtitle": "From the Icons of Marley Spoon Collection",
+          "time": "30–40 min",
+          "cuisine": "Italian",
+          "badges": ["Customizable", "Icons"]
+        },
+        {
+          "title": "Martha's Best Pork Tenderloin Marbella",
+          "subtitle": "with Mashed Potatoes",
+          "time": "30–40 min",
+          "cuisine": "Mediterranean"
+        }
+      ]
+    }
+  ]
+}
