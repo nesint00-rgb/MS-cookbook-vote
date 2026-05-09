@@ -58,32 +58,83 @@
   .card {
     background: var(--card-bg);
     border: 2px solid var(--border);
-    border-radius: 12px;
-    padding: 14px;
-    margin-bottom: 10px;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 12px;
     cursor: pointer;
-    transition: background 0.15s, border-color 0.15s, transform 0.08s;
+    transition: background 0.15s, border-color 0.15s, transform 0.08s, box-shadow 0.15s;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
+    position: relative;
   }
   .card:active { transform: scale(0.99); }
   .card.selected {
-    background: var(--accent-light);
     border-color: var(--accent);
+    box-shadow: 0 0 0 2px var(--accent-light) inset;
   }
-  .card-row {
+  .thumb-wrap {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    background: linear-gradient(135deg, #e7decd 0%, #d3c7b3 100%);
+    overflow: hidden;
+  }
+  .thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: opacity 0.3s;
+  }
+  .thumb.loading { opacity: 0; }
+  .check {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 32px;
+    height: 32px;
+    border: 2px solid #fff;
+    border-radius: 50%;
     display: flex;
-    gap: 12px;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-weight: bold;
+    background: rgba(0,0,0,0.4);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    flex-shrink: 0;
+    font-size: 18px;
+    z-index: 2;
+    transition: background 0.15s, border-color 0.15s, transform 0.15s;
   }
-  .card-content { flex: 1; min-width: 0; }
+  .selected .check {
+    background: var(--accent);
+    border-color: #fff;
+    transform: scale(1.05);
+  }
+  .star-pill {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: var(--in-box);
+    color: #fff;
+    padding: 4px 10px 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    font-weight: 600;
+    z-index: 2;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  }
+  .card-content {
+    padding: 12px 14px 14px;
+  }
   .card-title {
     font-weight: 600;
     margin: 0 0 4px;
     font-size: 16px;
     line-height: 1.3;
   }
-  .star { color: var(--in-box); font-size: 14px; margin-right: 4px; }
   .card-subtitle {
     color: var(--muted);
     font-size: 14px;
@@ -104,24 +155,6 @@
     border-radius: 999px;
     color: #5a4a30;
     white-space: nowrap;
-  }
-  .check {
-    width: 28px;
-    height: 28px;
-    border: 2px solid var(--border);
-    border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: bold;
-    background: #fff;
-    flex-shrink: 0;
-    font-size: 16px;
-  }
-  .selected .check {
-    background: var(--accent);
-    border-color: var(--accent);
   }
   .send-bar {
     position: fixed;
@@ -190,7 +223,7 @@
   <h1>Marley Spoon Vote</h1>
   <div class="subtitle" id="weekof">Loading…</div>
 </header>
-<div class="legend">⭐ = currently in box · tap any recipe you'd be OK with</div>
+<div class="legend">tap any recipe you'd be OK with · ★ pill = currently in box</div>
 <main id="slots"></main>
 <div class="send-bar">
   <button class="clear-btn" id="clear">Clear</button>
@@ -247,20 +280,23 @@
         card.className = 'card' + (selected ? ' selected' : '');
         card.dataset.id = id;
         const badges = (recipe.badges || []).map(b => `<span class="badge">${escapeHtml(b)}</span>`).join('');
+        const thumb = recipe.image
+          ? `<img class="thumb loading" loading="lazy" alt="${escapeHtml(recipe.title)}" src="${escapeHtml(recipe.image)}" onload="this.classList.remove('loading')" onerror="this.style.display='none'">`
+          : '';
         card.innerHTML = `
-          <div class="card-row">
-            <div class="card-content">
-              <div class="card-title">
-                ${recipe.inBox ? '<span class="star">★</span>' : ''}${escapeHtml(recipe.title)}
-              </div>
-              ${recipe.subtitle ? `<div class="card-subtitle">${escapeHtml(recipe.subtitle)}</div>` : ''}
-              <div class="card-meta">
-                ${recipe.time ? `<span>${escapeHtml(recipe.time)}</span>` : ''}
-                ${recipe.cuisine ? `<span>· ${escapeHtml(recipe.cuisine)}</span>` : ''}
-                ${badges}
-              </div>
-            </div>
+          <div class="thumb-wrap">
+            ${thumb}
+            ${recipe.inBox ? '<div class="star-pill">★ In box</div>' : ''}
             <div class="check">${selected ? '✓' : ''}</div>
+          </div>
+          <div class="card-content">
+            <div class="card-title">${escapeHtml(recipe.title)}</div>
+            ${recipe.subtitle ? `<div class="card-subtitle">${escapeHtml(recipe.subtitle)}</div>` : ''}
+            <div class="card-meta">
+              ${recipe.time ? `<span>${escapeHtml(recipe.time)}</span>` : ''}
+              ${recipe.cuisine ? `<span>· ${escapeHtml(recipe.cuisine)}</span>` : ''}
+              ${badges}
+            </div>
           </div>
         `;
         card.addEventListener('click', () => toggle(id, card));

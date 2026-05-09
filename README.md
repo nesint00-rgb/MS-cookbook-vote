@@ -43,7 +43,8 @@ Wife refreshes the page on her phone, sees the new week, votes, hits Send.
           "time": "30–40 min",
           "cuisine": "Latin",
           "badges": ["Premium +$4.99/serv", "Optional Spice"],
-          "inBox": true        // shows ⭐ — currently in MS cart
+          "inBox": true,        // shows ★ pill — currently in MS cart
+          "image": "https://marleyspoon.com/media/recipes/.../large/...jpeg"
         }
       ]
     }
