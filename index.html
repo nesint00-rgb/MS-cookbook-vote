@@ -156,6 +156,50 @@
     color: #5a4a30;
     white-space: nowrap;
   }
+  .ingredients {
+    margin-top: 10px;
+    border-top: 1px solid var(--border);
+    padding-top: 8px;
+  }
+  .ing-toggle {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 4px 0;
+    color: var(--accent);
+    font-size: 13px;
+    font-weight: 600;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .ing-toggle .chev {
+    transition: transform 0.2s;
+    font-size: 11px;
+  }
+  .ing-toggle.open .chev {
+    transform: rotate(90deg);
+  }
+  .ing-list {
+    display: none;
+    margin-top: 8px;
+    padding: 8px 4px 4px;
+    flex-wrap: wrap;
+    gap: 6px;
+  }
+  .ing-list.open {
+    display: flex;
+  }
+  .ing-item {
+    background: #fff8ec;
+    border: 1px solid #f0e3c3;
+    color: #5a4a30;
+    padding: 3px 9px;
+    border-radius: 999px;
+    font-size: 12.5px;
+    line-height: 1.4;
+    white-space: nowrap;
+  }
   .send-bar {
     position: fixed;
     bottom: 0;
@@ -297,8 +341,28 @@
               ${recipe.cuisine ? `<span>· ${escapeHtml(recipe.cuisine)}</span>` : ''}
               ${badges}
             </div>
+            ${(recipe.ingredients && recipe.ingredients.length) ? `
+              <div class="ingredients">
+                <div class="ing-toggle" data-ing-toggle>
+                  <span>Ingredients (${recipe.ingredients.length})</span>
+                  <span class="chev">▶</span>
+                </div>
+                <div class="ing-list">
+                  ${recipe.ingredients.map(ing => `<span class="ing-item">${escapeHtml(ing)}</span>`).join('')}
+                </div>
+              </div>
+            ` : ''}
           </div>
         `;
+        // Card-level click toggles selection — but ingredient toggle stops propagation
+        const ingToggle = card.querySelector('[data-ing-toggle]');
+        if (ingToggle) {
+          ingToggle.addEventListener('click', e => {
+            e.stopPropagation();
+            ingToggle.classList.toggle('open');
+            ingToggle.nextElementSibling.classList.toggle('open');
+          });
+        }
         card.addEventListener('click', () => toggle(id, card));
         sec.appendChild(card);
       });
