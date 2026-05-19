@@ -15,6 +15,9 @@
     --text: #1a1a1a;
     --muted: #666;
     --in-box: #d4a017;
+    --cat-chicken: #f4c430;
+    --cat-beef: #d64545;
+    --cat-other: #3b82f6;
   }
   * { box-sizing: border-box; }
   body {
@@ -25,7 +28,7 @@
     padding-bottom: 110px;
   }
   header {
-    padding: 20px 16px 14px;
+    padding: 18px 16px 12px;
     background: #fff;
     border-bottom: 1px solid var(--border);
     text-align: center;
@@ -33,28 +36,22 @@
     top: 0;
     z-index: 10;
   }
-  h1 { font-size: 20px; margin: 0 0 4px; font-weight: 700; }
+  h1 { font-size: 19px; margin: 0 0 4px; font-weight: 700; }
   .subtitle { color: var(--muted); font-size: 14px; }
   .legend {
-    text-align: center;
-    color: var(--muted);
-    font-size: 13px;
-    padding: 12px 16px 0;
-    line-height: 1.5;
-  }
-  .slot {
-    margin: 24px 16px 8px;
-  }
-  .slot-header {
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 12px;
     display: flex;
-    align-items: baseline;
-    gap: 8px;
+    gap: 14px;
+    justify-content: center;
     flex-wrap: wrap;
+    color: var(--muted);
+    font-size: 12.5px;
+    padding: 10px 16px 0;
   }
-  .slot-count { font-size: 14px; font-weight: normal; color: var(--muted); }
+  .legend span { display: inline-flex; align-items: center; gap: 5px; }
+  .swatch { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+  .slot { margin: 16px 12px 8px; }
+  main { padding-top: 4px; }
+
   .card {
     background: var(--card-bg);
     border: 2px solid var(--border);
@@ -62,212 +59,170 @@
     overflow: hidden;
     margin-bottom: 12px;
     cursor: pointer;
-    transition: background 0.15s, border-color 0.15s, transform 0.08s, box-shadow 0.15s;
+    transition: border-color 0.15s, transform 0.08s, box-shadow 0.15s;
     user-select: none;
     -webkit-tap-highlight-color: transparent;
-    position: relative;
+    display: flex;
+    align-items: stretch;
   }
-  .card:active { transform: scale(0.99); }
+  .card:active { transform: scale(0.995); }
   .card.selected {
     border-color: var(--accent);
     box-shadow: 0 0 0 2px var(--accent-light) inset;
   }
+
+  /* Narrow colored category strip */
+  .cat-strip {
+    width: 30px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+  }
+  .cat-chicken .cat-strip { background: var(--cat-chicken); }
+  .cat-beef .cat-strip { background: var(--cat-beef); }
+  .cat-other .cat-strip { background: var(--cat-other); }
+
+  /* Middle: photo + text */
+  .card-mid {
+    flex: 1 1 auto;
+    min-width: 0;
+    display: flex;
+    flex-direction: column;
+  }
   .thumb-wrap {
     position: relative;
     width: 100%;
-    aspect-ratio: 16 / 10;
+    aspect-ratio: 16 / 9;
     background: linear-gradient(135deg, #e7decd 0%, #d3c7b3 100%);
     overflow: hidden;
   }
   .thumb {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    display: block;
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
     transition: opacity 0.3s;
   }
   .thumb.loading { opacity: 0; }
   .check {
     position: absolute;
-    top: 10px;
-    right: 10px;
-    width: 32px;
-    height: 32px;
+    top: 8px; right: 8px;
+    width: 30px; height: 30px;
     border: 2px solid #fff;
     border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: #fff;
-    font-weight: bold;
+    display: flex; align-items: center; justify-content: center;
+    color: #fff; font-weight: bold;
     background: rgba(0,0,0,0.4);
     backdrop-filter: blur(4px);
     -webkit-backdrop-filter: blur(4px);
-    flex-shrink: 0;
-    font-size: 18px;
-    z-index: 2;
-    transition: background 0.15s, border-color 0.15s, transform 0.15s;
+    font-size: 16px; z-index: 2;
+    transition: background 0.15s, transform 0.15s;
   }
   .selected .check {
     background: var(--accent);
-    border-color: #fff;
-    transform: scale(1.05);
+    transform: scale(1.08);
   }
   .star-pill {
     position: absolute;
-    top: 10px;
-    left: 10px;
+    top: 8px; left: 8px;
     background: var(--in-box);
     color: #fff;
-    padding: 4px 10px 4px 8px;
+    padding: 3px 9px 3px 7px;
     border-radius: 999px;
-    font-size: 12px;
-    font-weight: 600;
+    font-size: 11px; font-weight: 600;
     z-index: 2;
     box-shadow: 0 2px 6px rgba(0,0,0,0.2);
   }
-  .card-content {
-    padding: 12px 14px 14px;
-  }
-  .card-title {
-    font-weight: 600;
-    margin: 0 0 4px;
-    font-size: 16px;
-    line-height: 1.3;
-  }
-  .card-subtitle {
-    color: var(--muted);
-    font-size: 14px;
-    margin: 0 0 10px;
-    line-height: 1.4;
-  }
+  .card-text { padding: 9px 11px 11px; }
+  .card-title { font-weight: 600; font-size: 15px; line-height: 1.25; margin: 0 0 3px; }
+  .card-subtitle { color: var(--muted); font-size: 13px; line-height: 1.35; margin: 0 0 7px; }
   .card-meta {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 6px;
-    align-items: center;
-    font-size: 12px;
-    color: var(--muted);
+    display: flex; flex-wrap: wrap; gap: 5px;
+    align-items: center; font-size: 11.5px; color: var(--muted);
   }
   .badge {
-    background: #f0ebe2;
-    padding: 2px 8px;
-    border-radius: 999px;
-    color: #5a4a30;
-    white-space: nowrap;
+    background: #f0ebe2; padding: 2px 7px;
+    border-radius: 999px; color: #5a4a30; white-space: nowrap;
   }
-  .ingredients {
-    margin-top: 10px;
-    border-top: 1px solid var(--border);
-    padding-top: 8px;
+
+  /* Right: always-on ingredients, 2 columns */
+  .card-ing {
+    flex: 0 0 44%;
+    max-width: 250px;
+    min-width: 140px;
+    border-left: 1px solid var(--border);
+    background: #fffdf8;
+    padding: 9px 10px;
+    overflow: hidden;
   }
-  .ing-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    cursor: pointer;
-    padding: 4px 0;
-    color: var(--accent);
-    font-size: 13px;
-    font-weight: 600;
-    user-select: none;
-    -webkit-tap-highlight-color: transparent;
+  .ing-head {
+    font-size: 11px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em;
+    color: var(--muted); margin-bottom: 6px;
   }
-  .ing-toggle .chev {
-    transition: transform 0.2s;
-    font-size: 11px;
+  .ing-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3px 8px;
   }
-  .ing-toggle.open .chev {
-    transform: rotate(90deg);
-  }
-  .ing-list {
-    display: none;
-    margin-top: 8px;
-    padding: 8px 4px 4px;
-    flex-wrap: wrap;
-    gap: 6px;
-  }
-  .ing-list.open {
-    display: flex;
-  }
+  .ing-grid.single { grid-template-columns: 1fr; }
   .ing-item {
-    background: #fff8ec;
-    border: 1px solid #f0e3c3;
+    font-size: 11px;
+    line-height: 1.3;
     color: #5a4a30;
-    padding: 3px 9px;
-    border-radius: 999px;
-    font-size: 12.5px;
-    line-height: 1.4;
-    white-space: nowrap;
+    padding: 1px 0;
+    overflow-wrap: anywhere;
   }
+  .ing-item::before { content: "• "; color: #c9b48a; }
+
   .send-bar {
     position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
+    bottom: 0; left: 0; right: 0;
     background: #fff;
     border-top: 1px solid var(--border);
     padding: 12px 16px calc(12px + env(safe-area-inset-bottom));
-    display: flex;
-    gap: 10px;
-    align-items: center;
+    display: flex; gap: 10px; align-items: center;
   }
   .send-btn {
-    flex: 1;
-    padding: 14px;
-    background: var(--accent);
-    color: #fff;
-    border: none;
-    border-radius: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
+    flex: 1; padding: 14px;
+    background: var(--accent); color: #fff;
+    border: none; border-radius: 10px;
+    font-size: 16px; font-weight: 600; cursor: pointer;
   }
-  .send-btn:disabled {
-    background: #ccc;
-    cursor: default;
-  }
+  .send-btn:disabled { background: #ccc; cursor: default; }
   .clear-btn {
     padding: 14px 18px;
-    background: transparent;
-    color: var(--muted);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    font-size: 14px;
-    cursor: pointer;
+    background: transparent; color: var(--muted);
+    border: 1px solid var(--border); border-radius: 10px;
+    font-size: 14px; cursor: pointer;
   }
   .toast {
     position: fixed;
-    bottom: 80px;
-    left: 50%;
+    bottom: 80px; left: 50%;
     transform: translateX(-50%) translateY(20px);
-    background: #1a1a1a;
-    color: #fff;
-    padding: 12px 20px;
-    border-radius: 999px;
-    font-size: 14px;
-    opacity: 0;
+    background: #1a1a1a; color: #fff;
+    padding: 12px 20px; border-radius: 999px;
+    font-size: 14px; opacity: 0;
     transition: opacity 0.2s, transform 0.2s;
-    pointer-events: none;
-    max-width: 90vw;
-    text-align: center;
+    pointer-events: none; max-width: 90vw; text-align: center;
   }
-  .toast.show {
-    opacity: 1;
-    transform: translateX(-50%) translateY(0);
-  }
-  @media (min-width: 700px) {
-    body { max-width: 700px; margin: 0 auto; }
-    .send-bar { max-width: 700px; left: 50%; transform: translateX(-50%); }
+  .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  @media (min-width: 760px) {
+    body { max-width: 760px; margin: 0 auto; }
+    .send-bar { max-width: 760px; left: 50%; transform: translateX(-50%); }
   }
 </style>
 </head>
 <body>
 <header>
-  <h1>Marley Spoon Vote</h1>
+  <h1>Marley Spoon — Pick Your Favorites</h1>
   <div class="subtitle" id="weekof">Loading…</div>
 </header>
-<div class="legend">tap any recipe you'd be OK with · ★ pill = currently in box</div>
+<div class="legend">
+  <span><i class="swatch" style="background:var(--cat-chicken)"></i>🐔 Chicken</span>
+  <span><i class="swatch" style="background:var(--cat-beef)"></i>🥩 Beef</span>
+  <span><i class="swatch" style="background:var(--cat-other)"></i>🐟 Other</span>
+</div>
 <main id="slots"></main>
 <div class="send-bar">
   <button class="clear-btn" id="clear">Clear</button>
@@ -276,16 +231,16 @@
 <div class="toast" id="toast"></div>
 <script>
   const STATE_KEY = 'ms-vote-selections';
+  const CAT_LABEL = { chicken: '🐔 Chicken', beef: '🥩 Beef', other: '🐟 Other' };
+  const CAT_EMOJI = { chicken: '🐔', beef: '🥩', other: '🐟' };
   let DATA = null;
   let selections = new Set(JSON.parse(localStorage.getItem(STATE_KEY) || '[]'));
 
-  // Cache-bust so we always get the latest shortlist
   fetch('current.json?v=' + Date.now())
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
     .then(data => {
       DATA = data;
       document.getElementById('weekof').textContent = 'Week of ' + (data.displayDate || data.weekOf);
-      // If shortlist changed, drop selections that no longer exist
       const validIds = new Set();
       data.slots.forEach(s => s.recipes.forEach((_, i) => validIds.add(s.id + '-' + i)));
       const before = selections.size;
@@ -295,7 +250,7 @@
     })
     .catch(err => {
       document.getElementById('slots').innerHTML =
-        '<p style="padding:20px;color:#c00;text-align:center">Could not load shortlist: ' + err.message + '</p>';
+        '<p style="padding:20px;color:#c00;text-align:center">Could not load list: ' + err.message + '</p>';
     });
 
   function escapeHtml(s) {
@@ -310,59 +265,45 @@
     DATA.slots.forEach(slot => {
       const sec = document.createElement('section');
       sec.className = 'slot';
-      const subtitle = slot.subtitle ? ` <span class="slot-count">(${escapeHtml(slot.subtitle)})</span>` : '';
-      sec.innerHTML = `
-        <div class="slot-header">
-          <span>${slot.emoji} ${escapeHtml(slot.name.toUpperCase())}</span>
-          <span class="slot-count">${slot.recipes.length} options</span>
-        </div>
-      `;
       slot.recipes.forEach((recipe, i) => {
         const id = slot.id + '-' + i;
         const selected = selections.has(id);
+        const cat = recipe.cat || 'other';
         const card = document.createElement('div');
-        card.className = 'card' + (selected ? ' selected' : '');
+        card.className = 'card cat-' + cat + (selected ? ' selected' : '');
         card.dataset.id = id;
         const badges = (recipe.badges || []).map(b => `<span class="badge">${escapeHtml(b)}</span>`).join('');
         const thumb = recipe.image
           ? `<img class="thumb loading" loading="lazy" alt="${escapeHtml(recipe.title)}" src="${escapeHtml(recipe.image)}" onload="this.classList.remove('loading')" onerror="this.style.display='none'">`
           : '';
+        const ings = recipe.ingredients || [];
+        const gridCls = ings.length <= 4 ? 'ing-grid single' : 'ing-grid';
         card.innerHTML = `
-          <div class="thumb-wrap">
-            ${thumb}
-            ${recipe.inBox ? '<div class="star-pill">★ In box</div>' : ''}
-            <div class="check">${selected ? '✓' : ''}</div>
-          </div>
-          <div class="card-content">
-            <div class="card-title">${escapeHtml(recipe.title)}</div>
-            ${recipe.subtitle ? `<div class="card-subtitle">${escapeHtml(recipe.subtitle)}</div>` : ''}
-            <div class="card-meta">
-              ${recipe.time ? `<span>${escapeHtml(recipe.time)}</span>` : ''}
-              ${recipe.cuisine ? `<span>· ${escapeHtml(recipe.cuisine)}</span>` : ''}
-              ${badges}
+          <div class="cat-strip" title="${escapeHtml(cat)}">${CAT_EMOJI[cat] || ''}</div>
+          <div class="card-mid">
+            <div class="thumb-wrap">
+              ${thumb}
+              ${recipe.inBox ? '<div class="star-pill">★ In box</div>' : ''}
+              <div class="check">${selected ? '✓' : ''}</div>
             </div>
-            ${(recipe.ingredients && recipe.ingredients.length) ? `
-              <div class="ingredients">
-                <div class="ing-toggle" data-ing-toggle>
-                  <span>Ingredients (${recipe.ingredients.length})</span>
-                  <span class="chev">▶</span>
-                </div>
-                <div class="ing-list">
-                  ${recipe.ingredients.map(ing => `<span class="ing-item">${escapeHtml(ing)}</span>`).join('')}
-                </div>
+            <div class="card-text">
+              <div class="card-title">${escapeHtml(recipe.title)}</div>
+              ${recipe.subtitle ? `<div class="card-subtitle">${escapeHtml(recipe.subtitle)}</div>` : ''}
+              <div class="card-meta">
+                ${recipe.time ? `<span>${escapeHtml(recipe.time)}</span>` : ''}
+                ${recipe.cuisine ? `<span>· ${escapeHtml(recipe.cuisine)}</span>` : ''}
+                ${badges}
               </div>
-            ` : ''}
+            </div>
           </div>
+          ${ings.length ? `
+            <div class="card-ing">
+              <div class="ing-head">Ingredients (${ings.length})</div>
+              <div class="${gridCls}">
+                ${ings.map(ing => `<div class="ing-item">${escapeHtml(ing)}</div>`).join('')}
+              </div>
+            </div>` : ''}
         `;
-        // Card-level click toggles selection — but ingredient toggle stops propagation
-        const ingToggle = card.querySelector('[data-ing-toggle]');
-        if (ingToggle) {
-          ingToggle.addEventListener('click', e => {
-            e.stopPropagation();
-            ingToggle.classList.toggle('open');
-            ingToggle.nextElementSibling.classList.toggle('open');
-          });
-        }
         card.addEventListener('click', () => toggle(id, card));
         sec.appendChild(card);
       });
@@ -412,25 +353,26 @@
   });
 
   document.getElementById('send').addEventListener('click', async () => {
-    const lines = [`Marley Spoon picks — week of ${DATA.displayDate || DATA.weekOf}`, ''];
+    const all = [];
     DATA.slots.forEach(slot => {
-      const picks = slot.recipes
-        .map((r, i) => ({ ...r, id: slot.id + '-' + i }))
-        .filter(r => selections.has(r.id));
-      if (picks.length === 0) return;
-      lines.push(`${slot.emoji} ${slot.name.toUpperCase()} (${picks.length})`);
+      slot.recipes.forEach((r, i) => {
+        const id = slot.id + '-' + i;
+        if (selections.has(id)) all.push({ ...r, cat: r.cat || 'other' });
+      });
+    });
+    const lines = [`Marley Spoon picks — week of ${DATA.displayDate || DATA.weekOf}`, ''];
+    ['chicken','beef','other'].forEach(c => {
+      const picks = all.filter(r => r.cat === c);
+      if (!picks.length) return;
+      lines.push(`${CAT_LABEL[c]} (${picks.length})`);
       picks.forEach(p => lines.push(`  ✓ ${p.title}`));
       lines.push('');
     });
     const text = lines.join('\n').trim();
 
     if (navigator.share) {
-      try {
-        await navigator.share({ title: 'MS picks', text });
-        return;
-      } catch (e) {
-        if (e.name === 'AbortError') return;
-      }
+      try { await navigator.share({ title: 'MS picks', text }); return; }
+      catch (e) { if (e.name === 'AbortError') return; }
     }
     fallback(text);
   });

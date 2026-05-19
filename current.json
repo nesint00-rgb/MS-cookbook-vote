@@ -14,7 +14,20 @@
           "time": "30–40 min",
           "cuisine": "Mexican",
           "image": "https://marleyspoon.com/media/recipes/521615/main_photos/large/tomatillo_chicken_stew-b95ba37123c14c7d779e474c02285f20.jpeg",
-          "ingredients": ["15 oz can black beans","garlic","1 green bell pepper","½ lb tomatillos","¼ oz fresh cilantro","1 yellow onion","8.8 oz pkg ready-to-heat jasmine rice","10 oz pkg chicken breast strips","¼ oz Tex-Mex spice blend","4 oz can chopped green chiles","2 (1 oz) sour cream"]
+          "ingredients": [
+            "15 oz can black beans",
+            "garlic",
+            "1 green bell pepper",
+            "½ lb tomatillos",
+            "¼ oz fresh cilantro",
+            "1 yellow onion",
+            "8.8 oz pkg ready-to-heat jasmine rice",
+            "10 oz pkg chicken breast strips",
+            "¼ oz Tex-Mex spice blend",
+            "4 oz can chopped green chiles",
+            "2 (1 oz) sour cream"
+          ],
+          "cat": "chicken"
         },
         {
           "title": "Skillet Chicken & Gnocchi Parmesan",
@@ -22,7 +35,19 @@
           "time": "15–20 min",
           "cuisine": "Italian",
           "image": "https://marleyspoon.com/media/recipes/598905/main_photos/large/20_min_skillet_chicken_gnocchi_parmesan-c2ea99b1dc4db994123785bbf1f053df.jpeg",
-          "ingredients": ["1 oz panko","¼ oz Italian seasoning","12 oz pkg gnocchi","2 oz roasted red peppers","3¾ oz mozzarella","¾ oz grated Parmesan","10 oz pkg chicken breast strips","8 oz marinara sauce","1 romaine heart","1 pkt balsamic vinaigrette"]
+          "ingredients": [
+            "1 oz panko",
+            "¼ oz Italian seasoning",
+            "12 oz pkg gnocchi",
+            "2 oz roasted red peppers",
+            "3¾ oz mozzarella",
+            "¾ oz grated Parmesan",
+            "10 oz pkg chicken breast strips",
+            "8 oz marinara sauce",
+            "1 romaine heart",
+            "1 pkt balsamic vinaigrette"
+          ],
+          "cat": "chicken"
         },
         {
           "title": "The Family Favorite Chicken Pot Pie",
@@ -30,7 +55,19 @@
           "time": "2 hours",
           "cuisine": "American",
           "image": "https://marleyspoon.com/media/recipes/595089/main_photos/large/the-0a9a1dc87fc0f4f36020611399d7f5ef.jpeg",
-          "ingredients": ["2 (8.8 oz) pie doughs","1 yellow onion","6 oz carrots","1 small bag celery","¼ oz fresh thyme","2 (8 oz) pkgs cooked chicken breast","2 pkts chicken broth concentrate","¼ oz mushroom seasoning","3 oz mascarpone","5 oz peas"]
+          "ingredients": [
+            "2 (8.8 oz) pie doughs",
+            "1 yellow onion",
+            "6 oz carrots",
+            "1 small bag celery",
+            "¼ oz fresh thyme",
+            "2 (8 oz) pkgs cooked chicken breast",
+            "2 pkts chicken broth concentrate",
+            "¼ oz mushroom seasoning",
+            "3 oz mascarpone",
+            "5 oz peas"
+          ],
+          "cat": "chicken"
         },
         {
           "title": "Tandoori Chicken & Turmeric Cauliflower",
@@ -38,7 +75,19 @@
           "time": "30–40 min",
           "cuisine": "Indian",
           "image": "https://marleyspoon.com/media/recipes/600880/main_photos/large/tandoori_chicken_turmeric_cauliflower-422a2c35b282602c4deb0102d6962117.jpeg",
-          "ingredients": ["12 oz pkg boneless, skinless chicken breasts","¼ oz tandoori spice","4 oz tzatziki","5 oz basmati rice","1 red onion","1 head cauliflower","¼ oz turmeric","1 oz salted cashews","1 lime","¼ oz fresh mint"]
+          "ingredients": [
+            "12 oz pkg boneless, skinless chicken breasts",
+            "¼ oz tandoori spice",
+            "4 oz tzatziki",
+            "5 oz basmati rice",
+            "1 red onion",
+            "1 head cauliflower",
+            "¼ oz turmeric",
+            "1 oz salted cashews",
+            "1 lime",
+            "¼ oz fresh mint"
+          ],
+          "cat": "chicken"
         },
         {
           "title": "Low-Carb Flying Dutchman Burger",
@@ -46,7 +95,17 @@
           "time": "30–40 min",
           "cuisine": "American",
           "image": "https://marleyspoon.com/media/recipes/504060/main_photos/large/low_carb_flying_dutchman_burger-5b12f931f3a055521dd26e4f2e3f741f.jpeg",
-          "ingredients": ["1 yellow onion","3 oz pickles","2 (6 oz) green beans","2 (1 oz) mayonnaise","1 oz Worcestershire sauce","10 oz pkg grass-fed ground beef","¼ oz Dijon mustard","2 oz shredded cheddar-jack blend"]
+          "ingredients": [
+            "1 yellow onion",
+            "3 oz pickles",
+            "2 (6 oz) green beans",
+            "2 (1 oz) mayonnaise",
+            "1 oz Worcestershire sauce",
+            "10 oz pkg grass-fed ground beef",
+            "¼ oz Dijon mustard",
+            "2 oz shredded cheddar-jack blend"
+          ],
+          "cat": "beef"
         },
         {
           "title": "Moroccan Beef & Apricot Tagine",
@@ -54,7 +113,18 @@
           "time": "30–40 min",
           "cuisine": "Moroccan",
           "image": "https://marleyspoon.com/media/recipes/598845/main_photos/large/beef_apricot_tagine-ff933d1059f05d5f2da60e721373818f.jpeg",
-          "ingredients": ["3 oz carrots","1 red onion","1 oz diced dried apricots","10 oz pkg grass-fed ground beef","¼ oz baharat spice blend","14½ oz can whole peeled tomatoes","3 oz couscous","1 oz roasted almonds","¼ oz fresh cilantro"]
+          "ingredients": [
+            "3 oz carrots",
+            "1 red onion",
+            "1 oz diced dried apricots",
+            "10 oz pkg grass-fed ground beef",
+            "¼ oz baharat spice blend",
+            "14½ oz can whole peeled tomatoes",
+            "3 oz couscous",
+            "1 oz roasted almonds",
+            "¼ oz fresh cilantro"
+          ],
+          "cat": "beef"
         },
         {
           "title": "Bulgogi Burger",
@@ -62,7 +132,19 @@
           "time": "30–40 min",
           "cuisine": "Korean",
           "image": "https://marleyspoon.com/media/recipes/389935/main_photos/large/bulgogi_burger-b158783b3c88ad6fbaf9e8785cd4dc7e.jpeg",
-          "ingredients": ["2 potatoes","2 (1 oz) mayonnaise","1 oz kimchi paste","½ oz toasted sesame oil","1 apple","2 scallions","10 oz pkg grass-fed ground beef","3 oz stir-fry sauce","2 oz shredded cheddar-jack blend","2 artisan buns"]
+          "ingredients": [
+            "2 potatoes",
+            "2 (1 oz) mayonnaise",
+            "1 oz kimchi paste",
+            "½ oz toasted sesame oil",
+            "1 apple",
+            "2 scallions",
+            "10 oz pkg grass-fed ground beef",
+            "3 oz stir-fry sauce",
+            "2 oz shredded cheddar-jack blend",
+            "2 artisan buns"
+          ],
+          "cat": "beef"
         },
         {
           "title": "Sticky Teriyaki Beef Meatballs",
@@ -70,7 +152,19 @@
           "time": "15–20 min",
           "cuisine": "Japanese",
           "image": "https://marleyspoon.com/media/recipes/598839/main_photos/large/20_min_sticky_teriyaki_beef_meatballs-c6bcd7fa0372f433fbc1c38392057d84.jpeg",
-          "ingredients": ["5 oz white rice","1 bell pepper","2 scallions","4 oz snow peas","garlic","½ lb pkg ready-to-heat beef meatballs","2 oz teriyaki sauce","½ oz tamari soy sauce","1 oz rice vinegar","¼ oz pkt toasted sesame seeds"]
+          "ingredients": [
+            "5 oz white rice",
+            "1 bell pepper",
+            "2 scallions",
+            "4 oz snow peas",
+            "garlic",
+            "½ lb pkg ready-to-heat beef meatballs",
+            "2 oz teriyaki sauce",
+            "½ oz tamari soy sauce",
+            "1 oz rice vinegar",
+            "¼ oz pkt toasted sesame seeds"
+          ],
+          "cat": "beef"
         },
         {
           "title": "Oven-Fried Beef Taquitos",
@@ -78,7 +172,18 @@
           "time": "30–40 min",
           "cuisine": "Mexican",
           "image": "https://marleyspoon.com/media/recipes/600928/main_photos/large/beef-bda7479ca7ee72f9aefa160c43ca3a7f.jpeg",
-          "ingredients": ["½ lb tomatillos","¼ oz fresh cilantro","1 red onion","2 oz pickled jalapeños","10 oz pkg grass-fed ground beef","¼ oz taco seasoning","6 (6-inch) flour tortillas","2 (2 oz) shredded cheddar-jack blend","2 (1 oz) sour cream"]
+          "ingredients": [
+            "½ lb tomatillos",
+            "¼ oz fresh cilantro",
+            "1 red onion",
+            "2 oz pickled jalapeños",
+            "10 oz pkg grass-fed ground beef",
+            "¼ oz taco seasoning",
+            "6 (6-inch) flour tortillas",
+            "2 (2 oz) shredded cheddar-jack blend",
+            "2 (1 oz) sour cream"
+          ],
+          "cat": "beef"
         },
         {
           "title": "Greek-Inspired Salmon Gyro",
@@ -86,7 +191,17 @@
           "time": "30–40 min",
           "cuisine": "Greek",
           "image": "https://marleyspoon.com/media/recipes/605234/main_photos/large/greek-0011d5b05faefbc56d82bff5059a4613.jpeg",
-          "ingredients": ["1 cucumber","2 plum tomatoes","garlic","¼ oz fresh cilantro","4 oz Greek yogurt","2 Mediterranean pitas","10 oz pkg salmon fillets","¼ oz dried oregano"]
+          "ingredients": [
+            "1 cucumber",
+            "2 plum tomatoes",
+            "garlic",
+            "¼ oz fresh cilantro",
+            "4 oz Greek yogurt",
+            "2 Mediterranean pitas",
+            "10 oz pkg salmon fillets",
+            "¼ oz dried oregano"
+          ],
+          "cat": "other"
         },
         {
           "title": "Chili-Rubbed Pork Chops",
@@ -94,7 +209,18 @@
           "time": "40–50 min",
           "cuisine": "American",
           "image": "https://marleyspoon.com/media/recipes/594373/main_photos/large/chili_rubbed_pork_chops_smashed_potatoes-036e3baa7bece7dc5aa7a132296e2089.jpeg",
-          "ingredients": ["2 potatoes","garlic","¼ oz chili powder","¼ oz smoked paprika","6 oz green beans","12 oz pkg ribeye pork chop","2 (1 oz) sour cream","¼ oz fresh parsley","¼ oz Dijon mustard"]
+          "ingredients": [
+            "2 potatoes",
+            "garlic",
+            "¼ oz chili powder",
+            "¼ oz smoked paprika",
+            "6 oz green beans",
+            "12 oz pkg ribeye pork chop",
+            "2 (1 oz) sour cream",
+            "¼ oz fresh parsley",
+            "¼ oz Dijon mustard"
+          ],
+          "cat": "other"
         },
         {
           "title": "Cherry Dijon Pork Medallions",
@@ -102,7 +228,17 @@
           "time": "20–30 min",
           "cuisine": "American",
           "image": "https://marleyspoon.com/media/recipes/605214/main_photos/large/SKU1204_Hero-55bb5bcf7cdc3c763c3650595bff5e7b.jpg",
-          "ingredients": ["1 shallot","1 oz walnuts","10 oz pkg pork tenderloin","1 pkt chicken broth concentrate","1 oz dried cherries","2 (¼ oz) Dijon mustard","2 oz feta","5 oz baby spinach"]
+          "ingredients": [
+            "1 shallot",
+            "1 oz walnuts",
+            "10 oz pkg pork tenderloin",
+            "1 pkt chicken broth concentrate",
+            "1 oz dried cherries",
+            "2 (¼ oz) Dijon mustard",
+            "2 oz feta",
+            "5 oz baby spinach"
+          ],
+          "cat": "other"
         },
         {
           "title": "Pan-Roasted Tilapia",
@@ -110,7 +246,15 @@
           "time": "30–40 min",
           "cuisine": "American",
           "image": "https://marleyspoon.com/media/recipes/605230/main_photos/large/pan-1b50fc0ba6b11d7a3e2cda11ba7e140f.jpeg",
-          "ingredients": ["½ lb baby potatoes","1 red onion","1 lemon","5 oz baby spinach","10 oz pkg tilapia","¼ oz fresh dill"]
+          "ingredients": [
+            "½ lb baby potatoes",
+            "1 red onion",
+            "1 lemon",
+            "5 oz baby spinach",
+            "10 oz pkg tilapia",
+            "¼ oz fresh dill"
+          ],
+          "cat": "other"
         },
         {
           "title": "Curry Butter Barramundi",
@@ -118,7 +262,19 @@
           "time": "20–30 min",
           "cuisine": "Indian Fusion",
           "image": "https://marleyspoon.com/media/recipes/598948/main_photos/large/fast_curry_butter_barramundi-31cb224662e20a28c0b1002ef1074816.jpeg",
-          "ingredients": ["1 shallot","garlic","1 piece fresh ginger","3 oz couscous","½ oz dried currants","10 oz pkg barramundi","¼ oz curry powder","1 oz roasted almonds","1 bag arugula","¼ oz fresh mint"]
+          "ingredients": [
+            "1 shallot",
+            "garlic",
+            "1 piece fresh ginger",
+            "3 oz couscous",
+            "½ oz dried currants",
+            "10 oz pkg barramundi",
+            "¼ oz curry powder",
+            "1 oz roasted almonds",
+            "1 bag arugula",
+            "¼ oz fresh mint"
+          ],
+          "cat": "other"
         },
         {
           "title": "Jerk Shrimp, Black Beans & Rice",
@@ -126,7 +282,20 @@
           "time": "20–30 min",
           "cuisine": "Caribbean",
           "image": "https://marleyspoon.com/media/recipes/592333/main_photos/large/vegan_jerk_black_beans_rice-882615ab00f5c4708509a47df478d101.jpeg",
-          "ingredients": ["5 oz white rice","garlic","1 red onion","1 green bell pepper","1 orange","¼ oz jerk seasoning","15 oz can black beans","¼ oz fresh oregano","1 mango","¼ oz fresh cilantro","10 oz pkg shrimp"]
+          "ingredients": [
+            "5 oz white rice",
+            "garlic",
+            "1 red onion",
+            "1 green bell pepper",
+            "1 orange",
+            "¼ oz jerk seasoning",
+            "15 oz can black beans",
+            "¼ oz fresh oregano",
+            "1 mango",
+            "¼ oz fresh cilantro",
+            "10 oz pkg shrimp"
+          ],
+          "cat": "other"
         }
       ]
     }
