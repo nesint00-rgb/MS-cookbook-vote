@@ -27,7 +27,8 @@
             "4 oz can chopped green chiles",
             "2 (1 oz) sour cream"
           ],
-          "cat": "chicken"
+          "cat": "chicken",
+          "emoji": "🐔"
         },
         {
           "title": "Skillet Chicken & Gnocchi Parmesan",
@@ -47,7 +48,8 @@
             "1 romaine heart",
             "1 pkt balsamic vinaigrette"
           ],
-          "cat": "chicken"
+          "cat": "chicken",
+          "emoji": "🐔"
         },
         {
           "title": "The Family Favorite Chicken Pot Pie",
@@ -67,7 +69,8 @@
             "3 oz mascarpone",
             "5 oz peas"
           ],
-          "cat": "chicken"
+          "cat": "chicken",
+          "emoji": "🐔"
         },
         {
           "title": "Tandoori Chicken & Turmeric Cauliflower",
@@ -87,7 +90,8 @@
             "1 lime",
             "¼ oz fresh mint"
           ],
-          "cat": "chicken"
+          "cat": "chicken",
+          "emoji": "🐔"
         },
         {
           "title": "Low-Carb Flying Dutchman Burger",
@@ -105,7 +109,8 @@
             "¼ oz Dijon mustard",
             "2 oz shredded cheddar-jack blend"
           ],
-          "cat": "beef"
+          "cat": "beef",
+          "emoji": "🥩"
         },
         {
           "title": "Moroccan Beef & Apricot Tagine",
@@ -124,7 +129,8 @@
             "1 oz roasted almonds",
             "¼ oz fresh cilantro"
           ],
-          "cat": "beef"
+          "cat": "beef",
+          "emoji": "🥩"
         },
         {
           "title": "Bulgogi Burger",
@@ -144,7 +150,8 @@
             "2 oz shredded cheddar-jack blend",
             "2 artisan buns"
           ],
-          "cat": "beef"
+          "cat": "beef",
+          "emoji": "🥩"
         },
         {
           "title": "Sticky Teriyaki Beef Meatballs",
@@ -164,7 +171,8 @@
             "1 oz rice vinegar",
             "¼ oz pkt toasted sesame seeds"
           ],
-          "cat": "beef"
+          "cat": "beef",
+          "emoji": "🥩"
         },
         {
           "title": "Oven-Fried Beef Taquitos",
@@ -183,7 +191,8 @@
             "2 (2 oz) shredded cheddar-jack blend",
             "2 (1 oz) sour cream"
           ],
-          "cat": "beef"
+          "cat": "beef",
+          "emoji": "🥩"
         },
         {
           "title": "Greek-Inspired Salmon Gyro",
@@ -201,7 +210,8 @@
             "10 oz pkg salmon fillets",
             "¼ oz dried oregano"
           ],
-          "cat": "other"
+          "cat": "other",
+          "emoji": "🐟"
         },
         {
           "title": "Chili-Rubbed Pork Chops",
@@ -220,7 +230,8 @@
             "¼ oz fresh parsley",
             "¼ oz Dijon mustard"
           ],
-          "cat": "other"
+          "cat": "other",
+          "emoji": "🐖"
         },
         {
           "title": "Cherry Dijon Pork Medallions",
@@ -238,7 +249,8 @@
             "2 oz feta",
             "5 oz baby spinach"
           ],
-          "cat": "other"
+          "cat": "other",
+          "emoji": "🐖"
         },
         {
           "title": "Pan-Roasted Tilapia",
@@ -254,7 +266,8 @@
             "10 oz pkg tilapia",
             "¼ oz fresh dill"
           ],
-          "cat": "other"
+          "cat": "other",
+          "emoji": "🐟"
         },
         {
           "title": "Curry Butter Barramundi",
@@ -274,7 +287,8 @@
             "1 bag arugula",
             "¼ oz fresh mint"
           ],
-          "cat": "other"
+          "cat": "other",
+          "emoji": "🐟"
         },
         {
           "title": "Jerk Shrimp, Black Beans & Rice",
@@ -295,7 +309,8 @@
             "¼ oz fresh cilantro",
             "10 oz pkg shrimp"
           ],
-          "cat": "other"
+          "cat": "other",
+          "emoji": "🦐"
         }
       ]
     }

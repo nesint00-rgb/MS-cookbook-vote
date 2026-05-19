@@ -218,11 +218,6 @@
   <h1>Marley Spoon — Pick Your Favorites</h1>
   <div class="subtitle" id="weekof">Loading…</div>
 </header>
-<div class="legend">
-  <span><i class="swatch" style="background:var(--cat-chicken)"></i>🐔 Chicken</span>
-  <span><i class="swatch" style="background:var(--cat-beef)"></i>🥩 Beef</span>
-  <span><i class="swatch" style="background:var(--cat-other)"></i>🐟 Other</span>
-</div>
 <main id="slots"></main>
 <div class="send-bar">
   <button class="clear-btn" id="clear">Clear</button>
@@ -279,7 +274,7 @@
         const ings = recipe.ingredients || [];
         const gridCls = ings.length <= 4 ? 'ing-grid single' : 'ing-grid';
         card.innerHTML = `
-          <div class="cat-strip" title="${escapeHtml(cat)}">${CAT_EMOJI[cat] || ''}</div>
+          <div class="cat-strip" title="${escapeHtml(cat)}">${escapeHtml(recipe.emoji || CAT_EMOJI[cat] || '')}</div>
           <div class="card-mid">
             <div class="thumb-wrap">
               ${thumb}
