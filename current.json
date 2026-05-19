@@ -1,259 +1,92 @@
 {
-  "weekOf": "2026-05-13",
-  "displayDate": "Wednesday, May 13",
+  "weekOf": "2026-05-27",
+  "displayDate": "Wednesday, May 27",
   "slots": [
     {
-      "id": "beef",
-      "name": "Beef",
-      "emoji": "🥩",
+      "id": "top10",
+      "name": "This Week's Top 10",
+      "emoji": "🍽️",
+      "subtitle": "tap any you'd be happy with, then hit Send",
       "recipes": [
         {
-          "title": "Braised Beef Quesabirria Tacos",
-          "subtitle": "with Consommé & Cilantro-Lime Slaw",
-          "time": "50–60 min",
-          "cuisine": "Latin",
-          "badges": ["Premium +$4.99/serv", "Optional Spice"],
-          "inBox": true,
-          "image": "https://marleyspoon.com/media/recipes/247554/main_photos/large/shredded-67e89bac1529978d517f4a806d20c009.jpeg",
-          "ingredients": ["1 red onion","garlic","1 oz fresh cilantro","2 limes","3¾ oz mozzarella","2 (¼ oz) chili powder","¼ oz chipotle chili powder","4 oz red enchilada sauce","2 pkts beef broth concentrate","½ lb pkg ready-to-heat braised beef","6 (6-inch) corn tortillas","2 (1 oz) mayonnaise","1 oz sour cream","2 (4 oz) cabbage blend"]
-        },
-        {
-          "title": "Express! Vaca Frita",
-          "subtitle": "Cuban Crispy Shredded Beef with Rice",
-          "time": "10–15 min",
-          "cuisine": "Latin",
-          "image": "https://marleyspoon.com/media/recipes/589062/main_photos/large/express-39f9cb9922b290831e6a69594e8528b6.jpeg",
-          "ingredients": ["1 yellow onion","1 orange","1 lime","½ lb pkg ready-to-heat braised beef","¼ oz ground cumin","¼ oz dried oregano","½ oz tamari soy sauce","8.8 oz pkg ready-to-heat jasmine rice","¼ oz fresh cilantro"]
-        },
-        {
-          "title": "Chimichurri Beef Tacos",
-          "subtitle": "with Slaw & Pickled Onions",
-          "time": "20–30 min",
-          "cuisine": "Latin",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/593221/main_photos/large/chimichurri_beef_tacos-a3e2f9acddb066ee3a17d1c3857318e9.jpeg",
-          "ingredients": ["2 (1 oz) sour cream","¼ oz ranch seasoning","1 red onion","6 (6-inch) flour tortillas","10 oz pkg grass-fed ground beef","2 (2 oz) chimichurri sauce","4 oz cabbage blend"]
-        },
-        {
-          "title": "Beef & Fontina Grilled Cheese",
-          "subtitle": "with Onion Jam & Spinach-Orange Salad",
-          "time": "40–50 min",
-          "cuisine": "American",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/593215/main_photos/large/beef-e58671f053883b2bd91bdb47f3bf65a8.jpeg",
-          "ingredients": ["1 orange","1 yellow onion","½ oz tamari soy sauce","½ lb pkg ready-to-heat braised beef","2 oz shredded fontina","¾ oz Parmesan","4 slices sourdough","5 oz baby spinach"]
-        },
-        {
-          "title": "French Bistro-Style Steak Frites",
-          "subtitle": "with Arugula Salad",
-          "time": "40–50 min",
-          "cuisine": "French",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/602267/main_photos/large/bastille-8eea16865c007fe143b717550c19dea3.jpeg",
-          "ingredients": ["2 potatoes","1 shallot","garlic","1 lemon","10 oz pkg sirloin steaks","1 pkt beef broth concentrate","¼ oz fresh thyme","1 bag arugula","¼ oz Dijon mustard"]
-        },
-        {
-          "title": "The Cozy Cottage Pie",
-          "subtitle": "From the Icons of Marley Spoon Collection",
-          "time": "40–50 min",
-          "cuisine": "British",
-          "badges": ["Customizable", "Icons"],
-          "image": "https://marleyspoon.com/media/recipes/589155/main_photos/large/the-bf93c75b918208bb2ed671c7da46db71.jpeg",
-          "ingredients": ["1 yellow onion","garlic","3 oz carrots","¼ oz fresh thyme","2 potatoes","10 oz pkg grass-fed ground beef","1 oz cream cheese","1 oz Worcestershire sauce","5 oz peas","2 oz shredded cheddar-jack blend"]
-        }
-      ]
-    },
-    {
-      "id": "chicken",
-      "name": "Chicken",
-      "emoji": "🐔",
-      "recipes": [
-        {
-          "title": "Baked Chicken Schnitzel",
-          "subtitle": "with Potatoes, Onions & Asparagus",
+          "title": "Moroccan Beef & Apricot Tagine",
+          "subtitle": "with Couscous & Almonds",
           "time": "30–40 min",
-          "cuisine": "German",
-          "inBox": true,
-          "image": "https://marleyspoon.com/media/recipes/593270/main_photos/large/baked-df98908d6539e59336cb0fa51a979871.jpeg",
-          "ingredients": ["12 oz red potatoes","1 red onion","6 oz asparagus","¼ oz smoked paprika","½ lb pkg ready-to-heat chicken cutlets","2 (1 oz) sour cream","1 oz whole-grain mustard"]
+          "cuisine": "Moroccan",
+          "image": "https://marleyspoon.com/media/recipes/598845/main_photos/large/beef_apricot_tagine-ff933d1059f05d5f2da60e721373818f.jpeg",
+          "ingredients": ["3 oz carrots","1 red onion","1 oz diced dried apricots","10 oz pkg grass-fed ground beef","¼ oz baharat spice blend","14½ oz can whole peeled tomatoes","3 oz couscous","1 oz roasted almonds","¼ oz fresh cilantro"]
         },
         {
-          "title": "One-Pot Iraqi Chicken & Rice Bake",
-          "subtitle": "with Red Pepper Relish",
-          "time": "30–40 min",
-          "cuisine": "Middle Eastern",
-          "badges": ["Best Seller"],
-          "image": "https://marleyspoon.com/media/recipes/593269/main_photos/large/one_pot_iraqi_chicken_rice_bake-883f0701236b5347064c4feeddbe293b.jpeg",
-          "ingredients": ["1 yellow onion","garlic","¼ oz fresh cilantro","2 plum tomatoes","12 oz pkg boneless, skinless chicken thighs","¼ oz baharat spice blend","1.8 oz tomato paste","5 oz white rice","1 oz Kalamata olives","2 oz roasted red peppers"]
-        },
-        {
-          "title": "Chicken Kati Rolls",
-          "subtitle": "with Mint Raita & Lime",
-          "time": "30–40 min",
-          "cuisine": "Indian",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/593266/main_photos/large/fast_chicken_kati_rolls-388bcf4234bda52be9050930b5f36f93.jpeg",
-          "ingredients": ["1 red onion","1 bell pepper","10 oz pkg chicken breast strips","¼ oz garam masala","4 oz Greek yogurt","6 (6-inch) flour tortillas","2 oz sweet & sour sauce","¼ oz fresh mint","1 lime"]
-        },
-        {
-          "title": "Jerk Chicken Rice Bowl",
-          "subtitle": "with Pineapple Black Bean Salsa",
+          "title": "Sticky Teriyaki Beef Meatballs",
+          "subtitle": "with Snow Peas, Peppers & Steamed Rice",
           "time": "15–20 min",
-          "cuisine": "Caribbean",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/593264/main_photos/large/fast_jerk_pork_rice_bowl-4a0d93b69aea78e1098212511f3bc2e3.jpeg",
-          "ingredients": ["5 oz basmati rice","¾ oz coconut milk powder","15 oz can black beans","4 oz pineapple cup","1 red onion","1 lime","10 oz pkg chicken breast strips","¼ oz jerk seasoning","½ oz honey","¼ oz fresh cilantro"]
+          "cuisine": "Japanese",
+          "image": "https://marleyspoon.com/media/recipes/598839/main_photos/large/20_min_sticky_teriyaki_beef_meatballs-c6bcd7fa0372f433fbc1c38392057d84.jpeg",
+          "ingredients": ["5 oz white rice","1 bell pepper","2 scallions","4 oz snow peas","garlic","½ lb pkg ready-to-heat beef meatballs","2 oz teriyaki sauce","½ oz tamari soy sauce","1 oz rice vinegar","¼ oz pkt toasted sesame seeds"]
         },
         {
-          "title": "Wonton Stir-Fry with Chicken Thighs",
-          "subtitle": "& Sugar Snap Peas",
-          "time": "10–15 min",
-          "cuisine": "Asian",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/491215/main_photos/large/faster_than_takeout_chicken_wonton_stir_fry-37c2968552ec92e5dcf6236ff2274569.jpeg",
-          "ingredients": ["8.8 oz lasagna sheets","garlic","1 piece fresh ginger","10 oz pkg cubed chicken thighs","4 oz snap peas","½ oz toasted sesame oil","2 (3 oz) stir-fry sauce","¼ oz fresh cilantro","¼ oz pkt toasted sesame seeds"]
+          "title": "Bulgogi Burger",
+          "subtitle": "with Kimchi Cheese Fries",
+          "time": "30–40 min",
+          "cuisine": "Korean",
+          "image": "https://marleyspoon.com/media/recipes/389935/main_photos/large/bulgogi_burger-b158783b3c88ad6fbaf9e8785cd4dc7e.jpeg",
+          "ingredients": ["2 potatoes","2 (1 oz) mayonnaise","1 oz kimchi paste","½ oz toasted sesame oil","1 apple","2 scallions","10 oz pkg grass-fed ground beef","3 oz stir-fry sauce","2 oz shredded cheddar-jack blend","2 artisan buns"]
         },
         {
-          "title": "Fast! Thai Red Curry Chicken with Veggies",
-          "subtitle": "& Ready-to-Heat Jasmine Rice",
-          "time": "15–20 min",
-          "cuisine": "Thai",
-          "badges": ["Premium +$4.99/serv"],
-          "image": "https://marleyspoon.com/media/recipes/588889/main_photos/large/fast_thai_red_curry_chicken_with_veggies-353e24a47f7fd9f98fb60455054986cd.jpeg",
-          "ingredients": ["1 bell pepper","4 oz snow peas","1 red onion","1 lime","10 oz pkg chicken breast strips","2 (1 oz) Thai red curry paste","13.5 oz can coconut milk","¼ oz Thai lemongrass spice","¼ oz fresh cilantro","8.8 oz pkg ready-to-heat jasmine rice"]
-        },
-        {
-          "title": "Mediterranean Skillet Chicken",
-          "subtitle": "with Burst Tomatoes, Feta & Pearl Couscous",
-          "time": "20–30 min",
-          "cuisine": "Mediterranean",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/578680/main_photos/large/mediterranean-b481d94f96cd943fdf1ce9f45f51cedb.jpeg",
-          "ingredients": ["1 oz Kalamata olives","1 lemon","1 shallot","garlic","¼ oz fresh oregano","3 oz pearl couscous","12 oz pkg boneless, skinless chicken breasts","1 large pkg grape tomatoes","2 oz feta"]
-        },
-        {
-          "title": "Tortilla Soup with Readymade Chicken",
-          "subtitle": "Cilantro & Corn",
-          "time": "20–30 min",
-          "cuisine": "Latin",
-          "badges": ["Best Seller"],
-          "image": "https://marleyspoon.com/media/recipes/602270/main_photos/large/chicken-4b276860ee7bc6f04d649dbc35dbc6bd.jpeg",
-          "ingredients": ["6 (6-inch) corn tortillas","1 red onion","6 oz carrots","¼ oz fresh cilantro","8 oz pkg cooked chicken breast","¼ oz taco seasoning","1.8 oz tomato paste","1 pkt chicken broth concentrate","5 oz corn"]
-        },
-        {
-          "title": "Grilled Chicken & Cilantro Rice Bowl",
-          "subtitle": "with Salsa & Guacamole",
-          "time": "20–30 min",
-          "cuisine": "Latin",
-          "badges": ["−$1.00/serv"],
-          "image": "https://marleyspoon.com/media/recipes/589103/main_photos/large/grilled_chicken_cilantro_rice_bowl-e3f097599913eb853e593c64a2a89ecd.jpeg",
-          "ingredients": ["5 oz white rice","¼ oz fresh cilantro","12 oz pkg boneless, skinless chicken breasts","¼ oz ground cumin","4 oz salsa","2 (2 oz) guacamole"]
-        },
-        {
-          "title": "Express! Cheesy Chicken Quesadillas",
-          "subtitle": "with Roasted Peppers, Corn & Sour Cream",
-          "time": "10–15 min",
-          "cuisine": "Latin",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/589069/main_photos/large/express-ee66adca9e8b3d21257cccc293fc794e.jpeg",
-          "ingredients": ["8 oz pkg cooked chicken breast","2 (2 oz) shredded cheddar-jack blend","4 oz roasted red peppers","2½ oz corn","¼ oz taco seasoning","2 (10-inch) flour tortillas","2 (1 oz) sour cream"]
-        },
-        {
-          "title": "Chicken Piccata",
-          "subtitle": "with Lemony Pasta & Spinach",
+          "title": "Chicken Scallopini",
+          "subtitle": "with Parmesan Polenta & Sautéed Spinach",
           "time": "20–30 min",
           "cuisine": "Italian",
-          "badges": ["Dinnerly Saver −$1.00"],
-          "image": "https://marleyspoon.com/media/recipes/589112/main_photos/large/chicken_piccata-275c74663e36dc7447d93a0ff93f12d1.jpeg",
-          "ingredients": ["6 oz gemelli","1 lemon","12 oz pkg boneless, skinless chicken breasts","1 oz capers","¼ oz Tuscan spice blend","5 oz baby spinach"]
+          "image": "https://marleyspoon.com/media/recipes/605210/main_photos/large/chicken_scallopini-672f27c98d019c99590f33180c90d5ed.jpeg",
+          "ingredients": ["3 oz quick-cooking polenta","¼ oz fresh parsley","¾ oz grated Parmesan","garlic","1 lemon","12 oz pkg boneless, skinless chicken breasts","1 pkt turkey broth concentrate","5 oz baby spinach"]
+        },
+        {
+          "title": "Taiwanese Chicken Rice",
+          "subtitle": "with Readymade Chicken, Cucumbers & Bok Choy",
+          "time": "20–30 min",
+          "cuisine": "Taiwanese",
+          "image": "https://marleyspoon.com/media/recipes/598862/main_photos/large/fast_taiwanese-d9a2939b15071b07f410c1956f52af5e.jpeg",
+          "ingredients": ["5 oz sushi rice","1 cucumber","½ lb baby bok choy","¼ oz fresh cilantro","8 oz pkg cooked chicken breast","2 (½ oz) crispy onions","½ oz tamari soy sauce","1 pkt chicken broth concentrate","1 oz mirin","½ oz toasted sesame oil"]
+        },
+        {
+          "title": "Piri Piri Chicken",
+          "subtitle": "with Portuguese Rice",
+          "time": "50–60 min",
+          "cuisine": "Portuguese",
+          "image": "https://marleyspoon.com/media/recipes/598904/main_photos/large/peri_peri_chicken-8856141581abe0ef4af13487cadb9024.jpeg",
+          "ingredients": ["1 yellow onion","garlic","1 lemon","1 oz gochujang","2 pkts Sriracha","¼ oz smoked paprika","¼ oz gochugaru flakes","¼ oz ground coriander","1.8 oz tomato paste","12 oz pkg boneless, skinless chicken breasts","5 oz white rice","2 oz roasted red peppers","1 pkt chicken broth concentrate","2½ oz peas","¼ oz fresh cilantro"]
         },
         {
           "title": "The Famous French Onion Chicken Breast",
           "subtitle": "From the Icons of Marley Spoon Collection",
           "time": "30–40 min",
           "cuisine": "French",
-          "badges": ["Highest Rated", "Icons"],
-          "image": "https://marleyspoon.com/media/recipes/589145/main_photos/large/the-9f15cb10b3e6b59bbc81a62da3a10309.jpeg",
+          "image": "https://marleyspoon.com/media/recipes/595628/main_photos/large/the-9f15cb10b3e6b59bbc81a62da3a10309.jpeg",
           "ingredients": ["1 yellow onion","garlic","2 Portuguese rolls","¼ oz fresh thyme","12 oz pkg boneless, skinless chicken breasts","1 pkt chicken broth concentrate","2 oz shredded fontina","¼ oz Dijon mustard","5 oz baby spinach"]
         },
         {
-          "title": "The Luxurious Chicken al Limone",
-          "subtitle": "From the Icons of Marley Spoon Collection",
+          "title": "Cherry Dijon Pork Medallions",
+          "subtitle": "with Spinach & Feta Salad",
           "time": "20–30 min",
-          "cuisine": "Italian",
-          "badges": ["Customizable", "Icons"],
-          "image": "https://marleyspoon.com/media/recipes/589153/main_photos/large/the-a6589efca3e00067d37b6e083834ba69.jpeg",
-          "ingredients": ["6 oz spaghetti","garlic","1 lemon","10 oz pkg chicken breast strips","¼ oz fresh parsley","¾ oz grated Parmesan","5 oz baby spinach","1 pkt chicken broth concentrate"]
-        },
-        {
-          "title": "The Family Favorite Chicken Pot Pie",
-          "subtitle": "From the Icons of Marley Spoon Collection",
-          "time": "2 hours",
           "cuisine": "American",
-          "badges": ["Big Batch +$4.99/serv", "Icons"],
-          "image": "https://marleyspoon.com/media/recipes/589130/main_photos/large/the-0a9a1dc87fc0f4f36020611399d7f5ef.jpeg",
-          "ingredients": ["2 (8.8 oz) pie doughs","1 yellow onion","6 oz carrots","1 small bag celery","¼ oz fresh thyme","2 (8 oz) pkgs cooked chicken breast","2 pkts chicken broth concentrate","¼ oz mushroom seasoning","3 oz mascarpone","5 oz peas"]
-        }
-      ]
-    },
-    {
-      "id": "other",
-      "name": "Other",
-      "emoji": "🐟🐖",
-      "subtitle": "shrimp / fish / pork / lamb",
-      "recipes": [
+          "image": "https://marleyspoon.com/media/recipes/605214/main_photos/large/SKU1204_Hero-55bb5bcf7cdc3c763c3650595bff5e7b.jpg",
+          "ingredients": ["1 shallot","1 oz walnuts","10 oz pkg pork tenderloin","1 pkt chicken broth concentrate","1 oz dried cherries","2 (¼ oz) Dijon mustard","2 oz feta","5 oz baby spinach"]
+        },
         {
-          "title": "Martha's Best Shrimp Étouffée",
-          "subtitle": "with Scallion Rice",
+          "title": "Greek-Inspired Salmon Gyro",
+          "subtitle": "with Chopped Salad, Pita & Garlic Sauce",
           "time": "30–40 min",
-          "cuisine": "Cajun",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/602248/main_photos/large/martha-1793393d34d13558c6817075cfb38393.jpeg",
-          "ingredients": ["1 yellow onion","1 small bag celery","1 bell pepper","2 scallions","5 oz white rice","¼ oz Cajun seasoning","1 pkt seafood broth concentrate","10 oz pkg shrimp"]
+          "cuisine": "Greek",
+          "image": "https://marleyspoon.com/media/recipes/605234/main_photos/large/greek-0011d5b05faefbc56d82bff5059a4613.jpeg",
+          "ingredients": ["1 cucumber","2 plum tomatoes","garlic","¼ oz fresh cilantro","4 oz Greek yogurt","2 Mediterranean pitas","10 oz pkg salmon fillets","¼ oz dried oregano"]
         },
         {
-          "title": "Pulled Pork Quesadillas",
-          "subtitle": "with Salsa & Sour Cream",
-          "time": "20–30 min",
-          "cuisine": "Latin",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/593910/main_photos/large/20_min_pulled_pork_quesadillas-ba3f0c4f344f5a1229fc2cec41ae0e7a.jpeg",
-          "ingredients": ["garlic","2 scallions","¼ oz fresh cilantro","½ lb pkg ready-to-heat pulled pork","4 oz salsa","¼ oz taco seasoning","6 (6-inch) flour tortillas","2 oz shredded cheddar-jack blend","2 (1 oz) sour cream","1 plum tomato"]
-        },
-        {
-          "title": "Seared Pork Cutlets",
-          "subtitle": "with Creamy Green Beans & Crispy Onions",
-          "time": "15–20 min",
+          "title": "Pan-Roasted Tilapia",
+          "subtitle": "with Potatoes & Herb Butter",
+          "time": "30–40 min",
           "cuisine": "American",
-          "badges": ["Customizable"],
-          "image": "https://marleyspoon.com/media/recipes/593256/main_photos/large/20_min_seared_pork_cutlets-7513af32932784000d0fabc05c290405.jpeg",
-          "ingredients": ["5 oz white rice","garlic","12 oz pkg pork cutlets","¼ oz paprika","6 oz green beans","¼ oz mushroom seasoning","2 (1 oz) cream cheese","½ oz crispy onions"]
-        },
-        {
-          "title": "Masala-Spiced Pork Kebabs",
-          "subtitle": "with Cauliflower Rice & Cilantro",
-          "time": "20–30 min",
-          "cuisine": "Indian",
-          "badges": ["Customizable", "Low-carb"],
-          "image": "https://marleyspoon.com/media/recipes/593254/main_photos/large/masala-cc430c4aa09eeab57ab3b28fb5bcca93.jpeg",
-          "ingredients": ["1 yellow onion","¼ oz fresh cilantro","1 piece fresh ginger","10 oz pkg ground pork","¼ oz garam masala","2 limes","4 oz Greek yogurt","12 oz cauliflower rice","¼ oz cumin seeds"]
-        },
-        {
-          "title": "The Popular Parmesan & Herb Pork Roast",
-          "subtitle": "From the Icons of Marley Spoon Collection",
-          "time": "30–40 min",
-          "cuisine": "Italian",
-          "badges": ["Customizable", "Icons"],
-          "image": "https://marleyspoon.com/media/recipes/589134/main_photos/large/the-31319cf4b488e42f5575f0106d52ca30.jpeg",
-          "ingredients": ["10 oz pkg pork tenderloin","½ lb broccoli","1 lemon","¾ oz grated Parmesan","4 oz farro","¼ oz Tuscan spice blend","garlic"]
-        },
-        {
-          "title": "Martha's Best Pork Tenderloin Marbella",
-          "subtitle": "with Mashed Potatoes",
-          "time": "30–40 min",
-          "cuisine": "Mediterranean",
-          "image": "https://marleyspoon.com/media/recipes/521636/main_photos/large/martha-300c8ee334bf742ca319d3bbdb12f3c2.jpeg",
-          "ingredients": ["12 oz Yukon gold potatoes","garlic","¼ oz fresh oregano","2 oz dried figs","10 oz pkg pork tenderloin","1 pkt turkey broth concentrate","2 (1 oz) Castelvetrano olives"]
+          "image": "https://marleyspoon.com/media/recipes/605230/main_photos/large/pan-1b50fc0ba6b11d7a3e2cda11ba7e140f.jpeg",
+          "ingredients": ["½ lb baby potatoes","1 red onion","1 lemon","5 oz baby spinach","10 oz pkg tilapia","¼ oz fresh dill"]
         }
       ]
     }
