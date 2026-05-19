@@ -207,6 +207,53 @@
     pointer-events: none; max-width: 90vw; text-align: center;
   }
   .toast.show { opacity: 1; transform: translateX(-50%) translateY(0); }
+  .menu-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: 600;
+  }
+  .menu-link:active { opacity: 0.6; }
+  .extras {
+    margin: 8px 12px 24px;
+    background: #fff;
+    border: 2px dashed var(--border);
+    border-radius: 14px;
+    padding: 14px;
+  }
+  .extras-head { font-size: 16px; font-weight: 700; margin-bottom: 2px; }
+  .extras-sub { font-size: 12.5px; color: var(--muted); margin-bottom: 12px; line-height: 1.4; }
+  .extras-chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 10px; }
+  .extra-chip {
+    display: inline-flex; align-items: center; gap: 7px;
+    background: var(--accent-light);
+    border: 1px solid var(--accent);
+    color: #1d3a20;
+    padding: 6px 8px 6px 12px;
+    border-radius: 999px;
+    font-size: 13px;
+    font-weight: 600;
+  }
+  .extra-chip button {
+    border: none; background: rgba(0,0,0,0.12);
+    color: #1d3a20; width: 20px; height: 20px;
+    border-radius: 50%; cursor: pointer;
+    font-size: 13px; line-height: 1;
+    display: flex; align-items: center; justify-content: center;
+  }
+  .extra-select {
+    width: 100%;
+    padding: 12px 10px;
+    font-size: 15px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    background: var(--bg);
+    color: var(--text);
+    -webkit-appearance: menulist;
+    appearance: menulist;
+  }
   @media (min-width: 760px) {
     body { max-width: 760px; margin: 0 auto; }
     .send-bar { max-width: 760px; left: 50%; transform: translateX(-50%); }
@@ -217,8 +264,15 @@
 <header>
   <h1>Marley Spoon — Pick Your Favorites</h1>
   <div class="subtitle" id="weekof">Loading…</div>
+  <a id="menulink" class="menu-link" target="_blank" rel="noopener" style="display:none">🔗 Browse the full Marley Spoon menu →</a>
 </header>
 <main id="slots"></main>
+<section id="extras-section" class="extras" style="display:none">
+  <div class="extras-head">➕ Add other dishes</div>
+  <div class="extras-sub">Not in the list above? Pick anything off the full menu (vegan, etc.). Add as many as you want.</div>
+  <div id="extras-chips" class="extras-chips"></div>
+  <div id="extras-picker"></div>
+</section>
 <div class="send-bar">
   <button class="clear-btn" id="clear">Clear</button>
   <button class="send-btn" id="send" disabled>Send (0)</button>
@@ -226,10 +280,12 @@
 <div class="toast" id="toast"></div>
 <script>
   const STATE_KEY = 'ms-vote-selections';
+  const EXTRAS_KEY = 'ms-vote-extras';
   const CAT_LABEL = { chicken: '🐔 Chicken', beef: '🥩 Beef', other: '🐟 Other' };
   const CAT_EMOJI = { chicken: '🐔', beef: '🥩', other: '🐟' };
   let DATA = null;
   let selections = new Set(JSON.parse(localStorage.getItem(STATE_KEY) || '[]'));
+  let extras = JSON.parse(localStorage.getItem(EXTRAS_KEY) || '[]');
 
   fetch('current.json?v=' + Date.now())
     .then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); })
@@ -241,7 +297,14 @@
       const before = selections.size;
       selections = new Set([...selections].filter(id => validIds.has(id)));
       if (selections.size !== before) saveState();
+      // Menu link
+      if (data.menuUrl) {
+        const ml = document.getElementById('menulink');
+        ml.href = data.menuUrl;
+        ml.style.display = 'inline-block';
+      }
       render();
+      renderExtras();
     })
     .catch(err => {
       document.getElementById('slots').innerHTML =
@@ -325,9 +388,52 @@
     localStorage.setItem(STATE_KEY, JSON.stringify([...selections]));
   }
 
+  function saveExtras() {
+    localStorage.setItem(EXTRAS_KEY, JSON.stringify(extras));
+  }
+
+  function renderExtras() {
+    if (!DATA || !Array.isArray(DATA.allDishes) || !DATA.allDishes.length) return;
+    document.getElementById('extras-section').style.display = 'block';
+
+    // chips for already-added extras
+    const chipWrap = document.getElementById('extras-chips');
+    chipWrap.innerHTML = extras.map((name, idx) =>
+      `<span class="extra-chip">${escapeHtml(name)}<button data-rm="${idx}" aria-label="Remove">✕</button></span>`
+    ).join('');
+    chipWrap.querySelectorAll('button[data-rm]').forEach(btn => {
+      btn.addEventListener('click', () => {
+        extras.splice(Number(btn.dataset.rm), 1);
+        saveExtras();
+        renderExtras();
+        updateSendBtn();
+      });
+    });
+
+    // a fresh dropdown to add the next one (dishes not already added)
+    const remaining = DATA.allDishes.filter(d => !extras.includes(d));
+    const picker = document.getElementById('extras-picker');
+    if (!remaining.length) { picker.innerHTML = ''; return; }
+    const sel = document.createElement('select');
+    sel.className = 'extra-select';
+    sel.innerHTML =
+      `<option value="" selected disabled>+ Add a dish from the full menu…</option>` +
+      remaining.map(d => `<option value="${escapeHtml(d)}">${escapeHtml(d)}</option>`).join('');
+    sel.addEventListener('change', () => {
+      if (sel.value) {
+        extras.push(sel.value);
+        saveExtras();
+        renderExtras();
+        updateSendBtn();
+      }
+    });
+    picker.innerHTML = '';
+    picker.appendChild(sel);
+  }
+
   function updateSendBtn() {
     const btn = document.getElementById('send');
-    const count = selections.size;
+    const count = selections.size + extras.length;
     btn.textContent = `Send (${count})`;
     btn.disabled = count === 0;
   }
@@ -340,11 +446,15 @@
   }
 
   document.getElementById('clear').addEventListener('click', () => {
-    if (selections.size === 0) return;
+    if (selections.size === 0 && extras.length === 0) return;
     if (!confirm('Clear all selections?')) return;
     selections.clear();
+    extras = [];
     saveState();
+    saveExtras();
     render();
+    renderExtras();
+    updateSendBtn();
   });
 
   document.getElementById('send').addEventListener('click', async () => {
@@ -363,6 +473,11 @@
       picks.forEach(p => lines.push(`  ✓ ${p.title}`));
       lines.push('');
     });
+    if (extras.length) {
+      lines.push(`➕ Added from full menu (${extras.length})`);
+      extras.forEach(n => lines.push(`  ✓ ${n}`));
+      lines.push('');
+    }
     const text = lines.join('\n').trim();
 
     if (navigator.share) {
