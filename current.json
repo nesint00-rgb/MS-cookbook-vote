@@ -89,6 +89,103 @@
           "emoji": "🐔"
         },
         {
+          "title": "Caprese Chicken Pitza",
+          "subtitle": "with Basil Pesto",
+          "time": "20–30 min",
+          "cuisine": "Italian",
+          "image": "https://marleyspoon.com/media/recipes/603605/main_photos/large/caprese_chicken_pitza-336e1ca7042766519a876973b4fd95cd.jpeg",
+          "ingredients": [
+            "3¾ oz mozzarella",
+            "2 plum tomatoes",
+            "10 oz pkg chicken breast strips",
+            "¼ oz granulated garlic",
+            "2 Mediterranean pitas",
+            "2 oz basil pesto"
+          ],
+          "cat": "chicken",
+          "emoji": "🐔"
+        },
+        {
+          "title": "Chicken & Vegetable Pot Pie",
+          "subtitle": "with Parmesan-Herb Drop Biscuits",
+          "time": "40–50 min",
+          "cuisine": "American",
+          "image": "https://marleyspoon.com/media/recipes/603920/main_photos/large/vegetable-fb914c8882d36fc07d6884619b3c81a5.jpeg",
+          "ingredients": [
+            "6 oz carrots",
+            "6 oz green beans",
+            "1 yellow onion",
+            "10 oz pkg chicken breast strips",
+            "12 oz Yukon gold potatoes",
+            "¼ oz fresh rosemary",
+            "2 (¾ oz) grated Parmesan",
+            "1 oz garlic & herb butter",
+            "1 pkt vegetable broth concentrate",
+            "5 oz corn",
+            "2 (5 oz) self-rising flour"
+          ],
+          "cat": "chicken",
+          "emoji": "🐔"
+        },
+        {
+          "title": "Oven-Fried Chicken Taquitos & Tomatillo Salsa",
+          "subtitle": "with Readymade Chicken & Jalapeños",
+          "time": "30–40 min",
+          "cuisine": "Latin",
+          "image": "https://marleyspoon.com/media/recipes/627754/main_photos/large/oven-a4afd2488bb06e20b82b9a713f70746a.jpeg",
+          "ingredients": [
+            "½ lb tomatillos",
+            "¼ oz fresh cilantro",
+            "1 red onion",
+            "2 oz pickled jalapeños",
+            "8 oz pkg cooked chicken breast",
+            "¼ oz taco seasoning",
+            "6 (6-inch) flour tortillas",
+            "2 (2 oz) shredded cheddar-jack blend",
+            "2 (1 oz) sour cream"
+          ],
+          "cat": "chicken",
+          "emoji": "🐔"
+        },
+        {
+          "title": "Pan-Roasted Chicken with Basil Aioli",
+          "subtitle": "& Bacon-Corn Succotash",
+          "time": "15–20 min",
+          "cuisine": "American",
+          "image": "https://marleyspoon.com/media/recipes/337614/main_photos/large/20_min_pan_roasted_pork_chops-fd5e5c9608eed338c03c52b64d669c4f.jpeg",
+          "ingredients": [
+            "1 yellow onion",
+            "garlic",
+            "4 oz pkg thick-cut bacon",
+            "1 zucchini",
+            "12 oz pkg boneless, skinless chicken breasts",
+            "2½ oz corn",
+            "2½ oz edamame",
+            "2 oz basil pesto",
+            "1 oz mayonnaise"
+          ],
+          "cat": "chicken",
+          "emoji": "🐔"
+        },
+        {
+          "title": "Pesto Alfredo Chicken & Gnocchi",
+          "subtitle": "with Readymade Chicken, Peas & Parmesan",
+          "time": "20–30 min",
+          "cuisine": "Italian",
+          "image": "https://marleyspoon.com/media/recipes/601185/main_photos/large/alfredo_chicken_gnocchi_tray_bake-7ab61930d66b20b0260e899e3ffe2689.jpeg",
+          "ingredients": [
+            "8 oz pkg cooked chicken breast",
+            "12 oz pkg gnocchi",
+            "¾ oz Parmesan",
+            "10 oz Alfredo sauce",
+            "2 oz basil pesto",
+            "5 oz peas",
+            "aluminum foil tray"
+          ],
+          "cat": "chicken",
+          "emoji": "🐔"
+        },
+        {
           "title": "Hawaiian Loco Moco Burger",
           "subtitle": "with Caramelized Onion Gravy & Rice",
           "time": "40–50 min",
@@ -109,27 +206,6 @@
           "emoji": "🥩"
         },
         {
-          "title": "Beef Kofta Lettuce Wraps",
-          "subtitle": "with Cucumber Salad & Creamy Tahini",
-          "time": "20–30 min",
-          "cuisine": "Middle Eastern",
-          "image": "https://marleyspoon.com/media/recipes/603957/main_photos/large/beef_kofta_lettuce_wraps-a328682f192771e3a99ce13830999627.jpeg",
-          "ingredients": [
-            "1 red onion",
-            "1 cucumber",
-            "1 head butter lettuce",
-            "¼ oz sumac",
-            "garlic",
-            "1 oz tahini",
-            "2 (1 oz) sour cream",
-            "10 oz pkg grass-fed ground beef",
-            "¼ oz baharat spice blend",
-            "¼ oz fresh mint"
-          ],
-          "cat": "beef",
-          "emoji": "🥩"
-        },
-        {
           "title": "Martha's Best Beef Dan Dan Noodles",
           "subtitle": "with Spinach",
           "time": "30–40 min",
@@ -145,6 +221,90 @@
             "1 pkt crushed red pepper",
             "10 oz pkg grass-fed ground beef",
             "5 oz baby spinach"
+          ],
+          "cat": "beef",
+          "emoji": "🥩"
+        },
+        {
+          "title": "Family Friendly! Beef Lasagna",
+          "subtitle": "with Ricotta & Mozzarella",
+          "time": "2 hours",
+          "cuisine": "Italian",
+          "image": "https://marleyspoon.com/media/recipes/601048/main_photos/large/family_friendly_big_batch_beef_lasasagna-af36d8b2d735f87dbca49ddbf58cb4cb.jpeg",
+          "ingredients": [
+            "1 yellow onion",
+            "garlic",
+            "½ oz fresh parsley",
+            "10 oz pkg grass-fed ground beef",
+            "2 (8 oz) marinara sauce",
+            "1 pkt beef broth concentrate",
+            "3 (3¾ oz) mozzarella",
+            "2 (¾ oz) grated Parmesan",
+            "2 (4 oz) ricotta",
+            "8.8 oz lasagna sheets"
+          ],
+          "cat": "beef",
+          "emoji": "🥩"
+        },
+        {
+          "title": "Meatloaf & Gravy",
+          "subtitle": "with Peas, Carrots & Creamy Sweet Potato Mash",
+          "time": "30–40 min",
+          "cuisine": "American",
+          "image": "https://marleyspoon.com/media/recipes/627757/main_photos/large/meatloaf-5f405af8a9ebd49e390b27a094284f6b.jpeg",
+          "ingredients": [
+            "1 yellow onion",
+            "garlic",
+            "2 sweet potatoes",
+            "6 oz carrots",
+            "¼ oz fresh thyme",
+            "1 pkt beef broth concentrate",
+            "10 oz pkg grass-fed ground beef",
+            "1 oz panko",
+            "5 oz peas",
+            "1 oz cream cheese"
+          ],
+          "cat": "beef",
+          "emoji": "🥩"
+        },
+        {
+          "title": "Ranch Smash Burger",
+          "subtitle": "with Honey Mustard Salad",
+          "time": "15–20 min",
+          "cuisine": "American",
+          "image": "https://marleyspoon.com/media/recipes/547728/main_photos/large/20_min_ranch_smash_burger-a86561ddfb4988631ef03d9a8ce4d091.jpeg",
+          "ingredients": [
+            "1 yellow onion",
+            "1 plum tomato",
+            "1 radish",
+            "1 romaine heart",
+            "10 oz pkg grass-fed ground beef",
+            "2 artisan buns",
+            "½ oz whole-grain mustard",
+            "½ oz honey",
+            "2 (1 oz) sour cream",
+            "¼ oz ranch seasoning"
+          ],
+          "cat": "beef",
+          "emoji": "🥩"
+        },
+        {
+          "title": "Bacon Jalapeño Smashburger",
+          "subtitle": "with Sweet Potato Fries & BBQ Mayo",
+          "time": "30–40 min",
+          "cuisine": "American",
+          "image": "https://marleyspoon.com/media/recipes/603932/main_photos/large/bacon_jalapeno_chicken_smashburger-881810d90cae4ce1ed4e3c1d8d81c8ad.jpeg",
+          "ingredients": [
+            "2 sweet potatoes",
+            "1 yellow onion",
+            "1 plum tomato",
+            "1 jalapeño chile",
+            "1 romaine heart",
+            "2 (1 oz) mayonnaise",
+            "¼ oz BBQ spice blend",
+            "4 oz pkg thick-cut bacon",
+            "2 artisan buns",
+            "10 oz pkg grass-fed ground beef"
           ],
           "cat": "beef",
           "emoji": "🥩"
@@ -171,40 +331,72 @@
           "emoji": "🐖"
         },
         {
-          "title": "Pecan-Crusted Salmon",
-          "subtitle": "with Sweet Potato Fries",
-          "time": "30–40 min",
-          "cuisine": "American",
-          "image": "https://marleyspoon.com/media/recipes/601167/main_photos/large/crispy-b0adf6d7a4db7b117b933781012e59c2.jpeg",
+          "title": "Martha's Best Crispy Salmon",
+          "subtitle": "with Coconut-Ginger Collard Greens",
+          "time": "50–60 min",
+          "cuisine": "Asian",
+          "image": "https://marleyspoon.com/media/recipes/601129/main_photos/large/martha_s_best_summer_crispy_salmon-46023a58a5a9d4cead851b21cc4520bf.jpeg",
           "ingredients": [
-            "1 sweet potato",
-            "1 oz pecans",
-            "½ lb broccoli",
-            "1 lemon",
-            "1 oz panko",
+            "1 bunch collard greens",
+            "1 shallot",
+            "1 plum tomato",
+            "1 piece fresh ginger",
+            "¼ oz fresh cilantro",
+            "1 lime",
+            "13.5 oz can coconut milk",
+            "¼ oz turmeric",
             "10 oz pkg salmon fillets",
-            "garlic",
-            "¼ oz fresh dill",
-            "1 oz mayonnaise"
+            "8.8 oz pkg ready-to-heat jasmine rice"
           ],
           "cat": "other",
           "emoji": "🐟"
         },
         {
-          "title": "Express! Bacon & Kimchi Fried Rice",
-          "subtitle": "with Scallions & Furikake",
-          "time": "10–15 min",
-          "cuisine": "Korean",
-          "image": "https://marleyspoon.com/media/recipes/601181/main_photos/large/express_recipe_bacon_kimchi_fried_rice-cc52c9f0ca68e40be40dab645bb4d077.jpeg",
+          "title": "Oven-Fried Pulled Pork Taquitos",
+          "subtitle": "with Tomatillo Salsa & Jalapeños",
+          "time": "30–40 min",
+          "cuisine": "Latin",
+          "image": "https://marleyspoon.com/media/recipes/627753/main_photos/large/oven-a4afd2488bb06e20b82b9a713f70746a.jpeg",
           "ingredients": [
-            "4 oz pkg thick-cut bacon",
-            "2 scallions",
-            "2 (2.8 oz) pkgs kimchi",
-            "8.8 oz pkg ready-to-heat jasmine rice",
-            "1 oz gochujang",
-            "½ oz tamari soy sauce",
-            "½ oz toasted sesame oil",
-            "¼ oz furikake"
+            "½ lb tomatillos",
+            "¼ oz fresh cilantro",
+            "1 red onion",
+            "2 oz pickled jalapeños",
+            "½ lb pkg ready-to-heat pulled pork",
+            "¼ oz taco seasoning",
+            "6 (6-inch) flour tortillas",
+            "2 (2 oz) shredded cheddar-jack blend",
+            "2 (1 oz) sour cream"
+          ],
+          "cat": "other",
+          "emoji": "🐖"
+        },
+        {
+          "title": "The Popular Parmesan & Herb Pork Roast",
+          "subtitle": "From the Icons of Marley Spoon Collection",
+          "time": "30–40 min",
+          "cuisine": "Italian",
+          "image": "https://marleyspoon.com/media/recipes/627686/main_photos/large/the-31319cf4b488e42f5575f0106d52ca30.jpeg",
+          "ingredients": [
+            "10 oz pkg pork tenderloin",
+            "½ lb broccoli",
+            "1 lemon",
+            "¾ oz grated Parmesan",
+            "4 oz farro",
+            "¼ oz Tuscan spice blend",
+            "garlic"
+          ],
+          "cat": "other",
+          "emoji": "🐖"
+        },
+        {
+          "title": "Tomatillo Pork Carnitas",
+          "subtitle": "with Brown Rice (prepared, heat-and-eat)",
+          "time": "5–10 min",
+          "cuisine": "Latin",
+          "image": "https://marleyspoon.com/media/recipes/603803/main_photos/large/tomatillo_pork_carnitas-328eb966be582157672502c0f59bef15.jpeg",
+          "ingredients": [
+            "2 (11.2 oz) pkgs Pre-Made Tomatillo Pork Carnitas Bowl"
           ],
           "cat": "other",
           "emoji": "🐖"
